@@ -1,6 +1,24 @@
-import "../style.css";
+import Navigo from "navigo";
+import Header from "./components/header";
+import HomePage from "./pages/home";
+import Footer from "./components/footer";
+import NewPage from "./pages/news";
 
-document.querySelector("#app").innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`;
+const router = new Navigo("/", { linksSelector: "a" });
+
+const print = (content) => {
+    document.getElementById("header").innerHTML = Header.render();
+    document.getElementById("content").innerHTML = content;
+    document.getElementById("footer").innerHTML = Footer.render();
+};
+
+router.on({
+    "/": () => {
+        print(HomePage.render());
+    },
+    "/new/:id": ({ data }) => {
+        const { id } = data;
+        print(NewPage.render(id));
+    },
+});
+router.resolve();
