@@ -16,7 +16,7 @@ router.on({
     "/": () => {
         print(HomePage.render());
     },
-    "/new/:id": ({ data }) => {
+    "/news/:id": ({ data }) => {
         const { id } = data;
         print(NewPage.render(id));
     },

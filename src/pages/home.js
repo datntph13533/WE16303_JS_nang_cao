@@ -12,10 +12,10 @@ const HomePage = {
         <div id="title" class="grid grid-cols-3 gap-8 mt-4 mb-4">
         ${data.map((post) => /* html */`
             <div class="border border-gray-400">
-                <a href="/new/${post.id}">
+                <a href="/news/${post.id}">
                     <img src="${post.img}" alt="" class="ml-[20px] mr-[20px] mt-[15px] mb-[10px]">
                 </a> 
-                <a href="/new/${post.id}">
+                <a href="/news/${post.id}">
                     <h3 class="uppercase text-lg font-bold ml-[20px] mr-[20px] text-orange-400">${post.title}</h3>
                 </a>
                 <p class="ml-[20px] mr-[15px] mt-[10px] mb-[20px]">${post.name}</p>
@@ -29,10 +29,10 @@ const HomePage = {
         <div id="title" class="grid grid-cols-3 gap-8 mt-4 mb-4">
         ${data.map((post) => /* html */`
             <div class="border border-gray-400">
-                <a href="/new/${post.id}">
+                <a href="/news/${post.id}">
                     <img src="${post.img}" alt="" class="ml-[20px] mr-[20px] mt-[15px] mb-[10px]">
                 </a> 
-                <a href="/new/${post.id}">
+                <a href="/news/${post.id}">
                     <h3 class="uppercase text-lg font-bold ml-[20px] mr-[20px] text-orange-400">${post.title}</h3>
                 </a>
                 <p class="ml-[20px] mr-[15px] mt-[10px] mb-[20px]">${post.name}</p>
