@@ -3,7 +3,7 @@ const Nav = {
         return /* html */ ` <nav>
         <ul class="flex h-10 py-2">
                 <li class="mx-4 text-slate-100"><a href="/">Trang chủ</a></li>
-                <li class="mx-4 text-slate-100"><a href="">Tuyển sinh</a></li>
+                <li class="mx-4 text-slate-100"><a href="/news">Tin tức</a></li>
                 <li class="mx-4 text-slate-100">
                     <a href="">Chương trình đào tạo</a>
                 </li>

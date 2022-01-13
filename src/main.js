@@ -3,6 +3,7 @@ import Header from "./components/header";
 import HomePage from "./pages/home";
 import Footer from "./components/footer";
 import NewPage from "./pages/news";
+import ListNeww from "./pages/listnew";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -15,6 +16,9 @@ const print = (content) => {
 router.on({
     "/": () => {
         print(HomePage.render());
+    },
+    "/news": () => {
+        print(ListNeww.render());
     },
     "/news/:id": ({ data }) => {
         const { id } = data;
