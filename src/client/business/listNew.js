@@ -1,11 +1,11 @@
-import data from "../data";
+import data from "../../data";
+import Footer from "../views/footer";
+import Header from "../views/header";
 
-const HomePage = {
+const ListNeww = {
     render() {
         return /* html */ `
-        <div class="py-2 max-w-5xl">
-            <img src="https://picsum.photos/1024/300" alt="" class="mx-auto" />
-        </div>
+        ${Header.render()}
         <h2 class="uppercase text-lg font-bold my-4 text-blue-900">
         Tin tức học tập
         </h2>
@@ -35,11 +35,12 @@ const HomePage = {
                 <a href="/news/${post.id}">
                     <h3 class="uppercase text-lg font-bold ml-[20px] mr-[20px] text-orange-400">${post.title}</h3>
                 </a>
-                <p class="ml-[20px] mr-[15px] mt-[10px] mb-[20px]">${post.name}</p>
+                <p class="ml-[20px] mr-[15px] mt-[10px] mb-[20px]">${post.desc}</p>
             </div>
             `).join("")}
         </div>
+        ${Footer.render()}
         `;
     },
 };
-export default HomePage;
+export default ListNeww;
