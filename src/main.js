@@ -28,6 +28,21 @@ router.on({
 
 router.resolve();
 
+// callback : 1 hàm được truyền vào 1 hàm khác như 1 đối số
+// sync, async: Đồng bộ và bất đồng bộ trong javascript
+
+// const a = 10;
+// const b = 20;
+
+// function display(result){
+//     document.querySelector('#app').innerHTML = result;
+// }
+
+// function sum(a,b, callback){
+//     callback(a + b);
+// }
+// sum(a, b, display);
+
 // function loadScript(src, callback) {
 //     const script = document.createElement("script");
 //     script.src = src;
@@ -48,6 +63,19 @@ router.resolve();
 //     }
 // });
 
+// callback in callback
+// loadScript('https://abc.com/index1.js', function(error, script){
+//     loadScript('https://abc.com/index2.js', function(error, script){
+//         loadScript('https://abc.com/index3.js', function(error, script){
+//             loadScript('https://abc.com/index4.js', function(error, script){
+//                 console.log('finished')
+//             })
+//         })
+//     })
+// });
+
+// es6 - promise: là một đối tượng đặc biệt, xử lý bất đồng bộ
+
 const render = () => new Promise((resolve, reject) => {
     const status = true;
     setTimeout(() => {
@@ -60,10 +88,20 @@ const render = () => new Promise((resolve, reject) => {
     }, 3000);
 });
 
-render()
-    .then((result) => {
-        result.push(5);
-        return result;
-    })
-    .then((data) => console.log(data))
-    .catch((error) => console.log(error));
+// render()
+//     .then((result) => {
+//         result.push(5)
+//         return result
+//     })
+//     .then(data => console.log(data))
+//     .catch(error => console.log(error))
+
+// async/await: cú pháp mới es8, xử lý bất đồng bộ
+
+const printA = async () => {
+    const result = await render();
+    console.log("result", result);
+    result.push(5);
+    console.log("result", result);
+};
+printA();
