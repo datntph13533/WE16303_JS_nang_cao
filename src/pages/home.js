@@ -1,7 +1,8 @@
-import data from "../data";
+import axios from "axios";
 
 const HomePage = {
-    render() {
+    async render() {
+        const { data } = await axios.get("https://5e79b4b817314d00161333da.mockapi.io/posts");
         return `
         <div class="max-w-5xl mx-auto">
         <div class="my-3">

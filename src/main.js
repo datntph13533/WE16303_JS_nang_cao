@@ -7,15 +7,15 @@ import NewDetail from "./pages/newsDetail";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (content) => {
+const print = async (content) => {
     document.getElementById("header").innerHTML = Header.render();
-    document.getElementById("content").innerHTML = content;
+    document.getElementById("content").innerHTML = await content.render();
     document.getElementById("footer").innerHTML = Footer.render();
 };
 
 router.on({
     "/": () => {
-        print(HomePage.render());
+        print(HomePage);
     },
     "/about": () => {
         print(AboutPage.render());
@@ -76,17 +76,17 @@ router.resolve();
 
 // es6 - promise: là một đối tượng đặc biệt, xử lý bất đồng bộ
 
-const render = () => new Promise((resolve, reject) => {
-    const status = true;
-    setTimeout(() => {
-        if (status) {
-            // lấy dữ liệu từ database
-            resolve([1, 2, 3, 4]);
-        } else {
-            reject(new Error("something bad happened"));
-        }
-    }, 3000);
-});
+// const render = () => new Promise((resolve, reject) => {
+//     const status = true;
+//     setTimeout(() => {
+//         if (status) {
+//             // lấy dữ liệu từ database
+//             resolve([1, 2, 3, 4]);
+//         } else {
+//             reject(new Error("something bad happened"));
+//         }
+//     }, 3000);
+// });
 
 // render()
 //     .then((result) => {
@@ -98,10 +98,10 @@ const render = () => new Promise((resolve, reject) => {
 
 // async/await: cú pháp mới es8, xử lý bất đồng bộ
 
-const printA = async () => {
-    const result = await render();
-    console.log("result", result);
-    result.push(5);
-    console.log("result", result);
-};
-printA();
+// const printA = async () => {
+//     const result = await render();
+//     console.log("result", result);
+//     result.push(5);
+//     console.log("result", result);
+// };
+// printA();
