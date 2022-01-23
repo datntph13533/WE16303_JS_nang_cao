@@ -1,4 +1,5 @@
 import axios from "axios";
+import { reRender } from "../../../utils/rerender";
 
 const AdminPost = {
     async render() {
@@ -33,10 +34,12 @@ const AdminPost = {
         const btns = document.querySelectorAll(".btn");
         btns.forEach((btn) => {
             const { id } = btn.dataset;
-            btn.addEventListener("click", () => {
+            btn.addEventListener("click", async () => {
                 const confirm = window.confirm("Bạn có chắc chắn không??");
                 if (confirm) {
-                    axios.delete(`https://5e79b4b817314d00161333da.mockapi.io/posts/${id}`);
+                    axios.delete(`https://5e79b4b817314d00161333da.mockapi.io/posts/${id}`).then(() => {
+                        reRender(AdminPost, "#content");
+                    });
                 }
             });
         });
