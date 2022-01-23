@@ -2,14 +2,15 @@ import Navigo from "navigo";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import AboutPage from "./pages/about";
+import AdminPost from "./pages/admin/posts";
 import HomePage from "./pages/home";
 import NewDetail from "./pages/newsDetail";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = async (content) => {
+const print = async (content, id) => {
     document.getElementById("header").innerHTML = Header.render();
-    document.getElementById("content").innerHTML = await content.render();
+    document.getElementById("content").innerHTML = await content.render(id);
     document.getElementById("footer").innerHTML = Footer.render();
 };
 
@@ -23,6 +24,9 @@ router.on({
     "/news/:id": ({ data }) => {
         const { id } = data;
         print(NewDetail.render(id));
+    },
+    "/admin/news": () => {
+        print(AdminPost);
     },
 });
 
