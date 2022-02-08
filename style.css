@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .menu-item{
+        @apply mx-5 leading-[50px] inline-block
+    }
+    .sub-menu-item{
+        @apply block p-2 hover:font-medium hover:text-black cursor-pointer border-b-[1px] border-slate-400 
+    }
+}
