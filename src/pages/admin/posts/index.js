@@ -1,9 +1,10 @@
 import axios from "axios";
 import { reRender } from "../../../utils/rerender";
+import { getAll, remove } from "../../../api/posts";
 
 const AdminPost = {
     async render() {
-        const { data } = await axios.get("https://5e79b4b817314d00161333da.mockapi.io/posts");
+        const { data } = await getAll();
 
         return /* html */`
         <div class="max-w-5xl mx-auto"> 
@@ -37,7 +38,7 @@ const AdminPost = {
             btn.addEventListener("click", async () => {
                 const confirm = window.confirm("Bạn có chắc chắn không??");
                 if (confirm) {
-                    axios.delete(`https://5e79b4b817314d00161333da.mockapi.io/posts/${id}`).then(() => {
+                    remove(id).then(() => {
                         reRender(AdminPost, "#content");
                     });
                 }

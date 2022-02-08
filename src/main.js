@@ -4,7 +4,7 @@ import Header from "./components/header";
 import AboutPage from "./pages/about";
 import AdminPost from "./pages/admin/posts";
 import HomePage from "./pages/home";
-import NewDetail from "./pages/newsDetail";
+import NewsDetail from "./pages/newsDetail";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -21,11 +21,11 @@ router.on({
         print(HomePage);
     },
     "/about": () => {
-        print(AboutPage.render());
+        print(AboutPage);
     },
     "/news/:id": ({ data }) => {
         const { id } = data;
-        print(NewDetail.render(id));
+        print(NewsDetail, id);
     },
     "/admin/news": () => {
         print(AdminPost);
@@ -56,18 +56,10 @@ router.resolve();
 //         callback(null, script);
 //     };
 //     script.onerror = () => {
-//         callback("lỗi rồi");
+//         callback("Loi roi");
 //     };
 //     document.head.append(script);
 // }
-
-// loadScript("https://www.youtube.com/", (error, script) => {
-//     if (error) {
-//         console.log(error);
-//     } else {
-//         console.log("script", script);
-//     }
-// });
 
 // callback in callback
 // loadScript('https://abc.com/index1.js', function(error, script){
@@ -83,31 +75,34 @@ router.resolve();
 // es6 - promise: là một đối tượng đặc biệt, xử lý bất đồng bộ
 
 // const render = () => new Promise((resolve, reject) => {
-//     const status = true;
-//     setTimeout(() => {
-//         if (status) {
+//     let status = false;
+//     setTimeout(function(){
+//         if(status){
 //             // lấy dữ liệu từ database
-//             resolve([1, 2, 3, 4]);
+//             resolve([1,2,3,4])
 //         } else {
-//             reject(new Error("something bad happened"));
+//             reject("Lắc đầu")
 //         }
-//     }, 3000);
+//     }, 3000)
 // });
 
-// render()
-//     .then((result) => {
-//         result.push(5)
-//         return result
-//     })
-//     .then(data => console.log(data))
-//     .catch(error => console.log(error))
+// // render()
+// //     .then((result) => {
+// //         result.push(5)
+// //         return result
+// //     })
+// //     .then(data => console.log(data))
+// //     .catch(error => console.log(error))
 
-// async/await: cú pháp mới es8, xử lý bất đồng bộ
+// // async/await: cú pháp mới es8, xử lý bất đồng bộ
 
 // const printA = async () => {
-//     const result = await render();
-//     console.log("result", result);
-//     result.push(5);
-//     console.log("result", result);
-// };
+//     try {
+//         const result = await render();
+//         result.push(5);
+//         console.log('result', result);
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 // printA();
