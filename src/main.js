@@ -30,6 +30,9 @@ router.on({
     "/admin/news": () => {
         print(AdminPost);
     },
+    "/admin/news/add": () => {
+        print(AddPost);
+    },
 });
 
 router.resolve();

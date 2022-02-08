@@ -12,3 +12,8 @@ export const remove = (id) => {
     const url = `/posts/${id}`;
     return instance.delete(url);
 };
+
+export const add = (post) => {
+    const url = `/posts`;
+    return instance.get(url, post);
+};
