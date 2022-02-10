@@ -3,8 +3,11 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import AboutPage from "./pages/about";
 import AdminPost from "./pages/admin/posts";
+import AddPost from "./pages/admin/posts/add";
 import HomePage from "./pages/home";
 import NewsDetail from "./pages/newsDetail";
+import Signin from "./pages/signin";
+import Signup from "./pages/signup";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
@@ -22,6 +25,12 @@ router.on({
     },
     "/about": () => {
         print(AboutPage);
+    },
+    "/signin": () => {
+        print(Signin);
+    },
+    "/signup": () => {
+        print(Signup);
     },
     "/news/:id": ({ data }) => {
         const { id } = data;

@@ -13,7 +13,34 @@ const AddPost = {
         `;
     },
     afterRender() {
-        const formAddPost
+        const formAddPost = document.querySelector("#formAddPost");
+        const CLOUDINARY_PRESET_KEY = "js8yqruv";
+        const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dvj4wwihv/image/upload";
+
+        formAddPost.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const file = document.querySelector("#img-post").files[0];
+
+            // lấy giá trị của file và gán vào object formData
+            const formData = new FormData();
+            formData.append("file", file);
+            formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
+
+            // call API cloudinary để đẩy ảnh lên
+            const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+                headers: {
+                    "Content-Type": "application/form-data",
+                },
+            });
+
+            // call api thêm bài viết
+            add({
+                title: document.querySelector("#title-post").value,
+                img: data.url,
+                desc: document.querySelector("#desc-post").value,
+            });
+        });
     },
 };
 

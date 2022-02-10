@@ -112,5 +112,17 @@
       "desc": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
       "id": "17"
     }
+  ],
+  "users": [
+    {
+      "email": "nguyenthanhdat27042002@gmail.com",
+      "password": "$2a$10$uG3emS51eNQUFl0GjGt.8uQdWlrg9h5xKvMH/rGF5EFb31A1wCgiG",
+      "id": 1
+    },
+    {
+      "email": "toilaai27042002@gmail.com",
+      "password": "$2a$10$RywaAK9BFhun7s9DQ8YmGuGOfjv9RV0649ztI/RDXxzTx3.aS9Gfy",
+      "id": 2
+    }
   ]
 }
