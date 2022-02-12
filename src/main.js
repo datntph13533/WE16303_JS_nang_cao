@@ -1,6 +1,4 @@
 import Navigo from "navigo";
-import Footer from "./components/footer";
-import Header from "./components/header";
 import AboutPage from "./pages/about";
 import AdminPost from "./pages/admin/posts";
 import AddPost from "./pages/admin/posts/add";
@@ -20,10 +18,10 @@ const print = async (content, id) => {
 router.on("/admin/*/", () => {
     console.log("truy cap duong dan admin/*");
 }, {
-    before(done, match) {
+    before(done) {
         if (localStorage.getItem("user")) {
             const userId = JSON.parse(localStorage.getItem("user")).id;
-            if (userId == 1) {
+            if (userId === 1) {
                 done();
             } else {
                 document.location.href = "/";
