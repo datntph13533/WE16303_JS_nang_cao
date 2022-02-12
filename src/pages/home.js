@@ -1,11 +1,15 @@
-import axios from "axios";
 import { getAll } from "../api/posts";
+import Footer from "../components/footer";
+import Header from "../components/header";
 
 const HomePage = {
     async render() {
         const { data } = await getAll();
         return /* html */`
         <div class="max-w-5xl mx-auto"> 
+            <div id="header">
+                ${Header.render()}
+            </div>
             <div class="my-3">
                 <img src="https://picsum.photos/1024/400" />
             </div>
@@ -23,8 +27,14 @@ const HomePage = {
                     `).join("")}
                 </div>
             </div>
+            <div id="footer">
+                ${Footer.render()}
+            </div>
         </div>
         `;
+    },
+    afterRender() {
+        Header.afterRender();
     },
 };
 

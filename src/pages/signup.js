@@ -1,9 +1,16 @@
+import toastr from "toastr";
 import { signup } from "../api/user";
+import Footer from "../components/footer";
+import Header from "../components/header";
 import { $ } from "../utils/selector";
+import "toastr/build/toastr.min.css";
 
 const Signup = {
     render() {
         return /* html */ `
+        <div id="header">
+            ${Header.render()}
+        </div>
         <form id="formSignup">
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 border border-gray-400 my-[10px]">
             <div class="max-w-md w-full space-y-8">
@@ -32,15 +39,29 @@ const Signup = {
             </div>
         </div>
         </form>
+        <div id="footer">
+            ${Footer.render()}
+        </div>
         `;
     },
     afterRender() {
-        $("#formSignup").addEventListener("submit", (e) => {
+        $("#formSignup").addEventListener("submit", async (e) => {
             e.preventDefault();
-            signup({
-                email: $("#email").value,
-                password: $("#password").value,
-            });
+            try {
+                const { data } = await signup({
+                    email: $("#email").value,
+                    password: $("#password").value,
+                });
+                toastr.success("Đăng ký thành công");
+                if (data) {
+                    setTimeout(() => {
+                        document.location.href = "/signin";
+                    }, 2000);
+                }
+            } catch (error) {
+                toastr.error(error.response.data);
+                $("#formSignup").reset();
+            }
         });
     },
 };

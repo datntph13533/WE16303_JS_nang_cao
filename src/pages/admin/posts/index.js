@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { reRender } from "../../../utils/rerender";
 import { getAll, remove } from "../../../api/posts";
 
@@ -19,6 +19,7 @@ const AdminPost = {
                             <tr>
                                 <td>${index + 1}</td>
                                 <td>${post.title}</td>
+                                <td><a href="/admin/news/add">Add</a></td>
                                 <td>
                                     <button data-id="${post.id}" class="btn">Remove</button>
                                 </td>

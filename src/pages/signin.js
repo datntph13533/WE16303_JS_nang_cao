@@ -1,9 +1,16 @@
+import toastr from "toastr";
 import { $ } from "../utils/selector";
 import { signin } from "../api/user";
+import "toastr/build/toastr.min.css";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 const Signin = {
     render() {
         return /* html */ `
+        <div id="header">
+            ${Header.render()}
+        </div>
         <form id="formSignup">
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 border border-gray-400 my-[10px]">
             <div class="max-w-md w-full space-y-8">
@@ -42,21 +49,32 @@ const Signin = {
             </div>
         </div>
         </form>
+        <div id="footer">
+            ${Footer.render()}
+        </div>
         `;
     },
     afterRender() {
         $("#formSignup").addEventListener("submit", async (e) => {
             e.preventDefault();
             try {
+                // call api, nếu đăng nhập thành công sẽ trả về object data
                 const { data } = await signin({
                     email: $("#email").value,
                     password: $("#password").value,
                 });
-                // console.log("data", data);
-                alert("Đăng nhập thành công");
-                document.location.href = "/#/";
+                localStorage.setItem("user", JSON.stringify(data.user));
+                toastr.success("Đăng nhập thành công, chuyển trang sau 2s");
+                setTimeout(() => {
+                    if (data.user.id === 1) {
+                        document.location.href = "/#/";
+                    } else {
+                        document.location.href = "/#/";
+                    }
+                }, 2000);
             } catch (error) {
-                alert(error.response.data);
+                // nếu lỗi thì trả về object chứa lỗi error.response.data
+                toastr.success(error.response.data);
                 $("#formSignin").reset();
             }
         });

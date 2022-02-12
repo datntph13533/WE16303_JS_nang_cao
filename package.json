@@ -21,6 +21,7 @@
   "dependencies": {
     "axios": "^0.25.0",
     "fix": "^0.0.6",
-    "navigo": "^8.11.1"
+    "navigo": "^8.11.1",
+    "toastr": "^2.1.4"
   }
 }
