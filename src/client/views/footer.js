@@ -1,10 +1,9 @@
 const Footer = {
     render() {
         return /* html */ `
-            <footer>
-                
-            </footer>
-        </div>
+        <footer>
+            
+        </footer>
         `;
     },
 };

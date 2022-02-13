@@ -2,11 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .menu-item{
+@layer components {
+    .menu-item {
         @apply mx-5 leading-[50px] inline-block
     }
-    .sub-menu-item{
-        @apply block p-2 hover:font-medium hover:text-black cursor-pointer border-b-[1px] border-slate-400 
+
+    .sub-menu-item {
+        @apply block p-2 hover:font-medium hover:text-black cursor-pointer border-b-[1px] border-slate-400
     }
+
+    /* start phần banner */
+    img{
+        @apply align-middle
+    }
+    .container {
+        @apply relative
+    }
+
+    .mySlides {
+        @apply hidden
+    }
+
+    .cursor {
+        @apply cursor-pointer
+    }
+
+    .prev,
+    .next {
+        @apply cursor-pointer absolute top-[40%] w-auto p-[16px] mt-[-50px] text-white font-bold text-[20px] rounded-r-[3px] select-none
+    }
+
+    .next {
+        @apply right-0 rounded-l-[3px]
+    }
+
+    .prev:hover,
+    .next:hover {
+        @apply bg-black
+    }
+
+    .row::after {
+        @apply content-none table clear-both
+    }
+
+    .column {
+        @apply w-[170px] float-left
+    }
+
+    .demo {
+        @apply opacity-60
+    }
+
+    .active,
+    .demo:hover {
+        @apply opacity-100
+    }
+
+    /* end banner */
 }
