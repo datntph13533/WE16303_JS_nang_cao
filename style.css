@@ -22,6 +22,9 @@
     .mySlides {
         @apply hidden
     }
+    .image{
+        @apply w-[1440px] h-[420px]
+    }
 
     .cursor {
         @apply cursor-pointer
@@ -29,7 +32,7 @@
 
     .prev,
     .next {
-        @apply cursor-pointer absolute top-[40%] w-auto p-[16px] mt-[-50px] text-white font-bold text-[20px] rounded-r-[3px] select-none
+        @apply cursor-pointer absolute top-[210px] w-auto p-[14px] mt-[-30px] text-white font-bold text-[20px] rounded-r-[3px]
     }
 
     .next {
@@ -46,7 +49,7 @@
     }
 
     .column {
-        @apply w-[170px] float-left
+        @apply w-[160px] h-[80px] float-left
     }
 
     .demo {

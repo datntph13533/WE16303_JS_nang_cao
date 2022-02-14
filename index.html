@@ -15,21 +15,20 @@
         <div id="content"></div>
     </div>
     <script type="module" src="./src/main.js"></script>
-    <script type="module">
-        const slideIndex = 1;
+    <script>
+        var slideIndex = 1;
         showSlides(slideIndex);
 
         function plusSlides(n) {
             showSlides(slideIndex += n);
         }
-
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
         function showSlides(n) {
-            const i;
-            const slides = document.getElementsByClassName("mySlides");
-            const dots = document.getElementsByClassName("demo");
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
             if (n > slides.length) { slideIndex = 1 }
             if (n < 1) { slideIndex = slides.length }
             for (i = 0; i < slides.length; i++) {
@@ -277,50 +276,64 @@
         </header>
         <main class="mt-[10px]">
             <div class="max-w-[1440px] mx-auto">
-                <div class="flex">
-                    <div class="w-[1020px] h-[500px] bg-slate-600 mr-[10px]">
-                        <div class="banner">
-                            <div class="mySlides">
-                                <img src="https://picsum.photos/1020/420">
+                <div class="w-[1440px] h-[500px]">
+                    <div class="container">
+                        <div class="mySlides">
+                            <img src="https://picsum.photos/1440/420" class="image">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://picsum.photos/1440/420" class="image">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://picsum.photos/1440/420" class="image">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://picsum.photos/1440/420" class="image">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://picsum.photos/1440/420" class="image">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://picsum.photos/1440/420" class="image">
+                        </div>
+
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+
+                        <div class="row">
+                            <div class="column">
+                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(1)">
                             </div>
-
-                            <a class="prev" onclick="plusSlides(-1)">❮</a>
-                            <a class="next" onclick="plusSlides(1)">❯</a>
-
-                            <div class="row flex">
-                                <div class="column">
-                                    <img class="demo cursor" src="https://picsum.photos/170/80"
-                                        onclick="currentSlide(1)">
-                                </div>
-                                <div class="column">
-                                    <img class="demo cursor" src="https://picsum.photos/170/80"
-                                        onclick="currentSlide(2)">
-                                </div>
-                                <div class="column">
-                                    <img class="demo cursor" src="https://picsum.photos/170/80"
-                                        onclick="currentSlide(3)">
-                                </div>
-                                <div class="column">
-                                    <img class="demo cursor" src="https://picsum.photos/170/80"
-                                        onclick="currentSlide(4)">
-                                </div>
-                                <div class="column">
-                                    <img class="demo cursor" src="https://picsum.photos/170/80"
-                                        onclick="currentSlide(5)">
-                                </div>
-                                <div class="column">
-                                    <img class="demo cursor" src="https://picsum.photos/170/80"
-                                        onclick="currentSlide(6)">
-                                </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(2)">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(3)">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(4)">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(5)">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(6)">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(7)">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(8)">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(9)">
                             </div>
                         </div>
                     </div>
-
-                    <div class="w-[410px] h-[500px] bg-slate-400">
-
-                    </div>
                 </div>
+
             </div>
+
             <div class="max-w-[1440px] mx-auto">
 
             </div>
@@ -329,9 +342,8 @@
 
         </footer>
     </div>
-
     <script>
-        const slideIndex = 1;
+        var slideIndex = 1;
         showSlides(slideIndex);
 
         function plusSlides(n) {
@@ -341,21 +353,21 @@
         function currentSlide(n) {
             showSlides(slideIndex = n);
         }
+
         function showSlides(n) {
-            const slides = document.getElementsByClassName("mySlides");
-            const dots = document.getElementsByClassName("demo");
-            const captionText = document.getElementById("caption");
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
             if (n > slides.length) { slideIndex = 1 }
             if (n < 1) { slideIndex = slides.length }
-            for (const i = 0; i < slides.length; i++) {
+            for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
-            for (const i = 0; i < dots.length; i++) {
+            for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace("active", "");
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += "active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
         }
     </script>
 </body>
