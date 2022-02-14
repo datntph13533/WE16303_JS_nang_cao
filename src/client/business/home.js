@@ -6,20 +6,9 @@ const HomePage = {
         return /* html */ `
         ${Header.render()}
         <main class="mt-[10px]">
-            <!-- start banner -->
             <div class="max-w-[1440px] mx-auto">
-                <!-- start banner -->
                 <div class="w-[1440px] h-[500px]">
                     <div class="container">
-                        <div class="mySlides">
-                            <img src="https://picsum.photos/1440/420" class="image">
-                        </div>
-                        <div class="mySlides">
-                            <img src="https://picsum.photos/1440/420" class="image">
-                        </div>
-                        <div class="mySlides">
-                            <img src="https://picsum.photos/1440/420" class="image">
-                        </div>
                         <div class="mySlides">
                             <img src="https://picsum.photos/1440/420" class="image">
                         </div>
@@ -73,12 +62,280 @@ const HomePage = {
                         </div>
                     </div>
                 </div>
-                <!-- end banner -->
 
             </div>
-            <!-- end banner -->
+
             <div class="max-w-[1440px] mx-auto">
-                
+                <div class="my-[20px]">
+                    <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>
+                    <div class="grid grid-cols-5 gap-8">
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-[20px]">
+                    <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>
+                    <div class="grid grid-cols-5 gap-8">
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-[20px]">
+                    <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>
+                    <div class="grid grid-cols-5 gap-8">
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-[20px]">
+                    <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>
+                    <div class="grid grid-cols-5 gap-8">
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-[20px]">
+                    <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>
+                    <div class="grid grid-cols-5 gap-8">
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                        <div class="border p-3">
+                            <a href="">
+                                <img src="http://placeimg.com/250/300/transport" alt="" />
+                            </a>
+                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
+                            <p>ahihi</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
         ${Footer.render()}
