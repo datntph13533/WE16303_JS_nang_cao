@@ -40,7 +40,7 @@ const Header = {
                 <div class="max-w-[1440px] mx-auto">
                     <div class="grid grid-cols-3">
                         <div class="my-[15px]">
-                            <a href="">
+                            <a href="/">
                                 <img src="../../../src/image/NTĐ (3).png" alt="" class="w-[70px] h-[70px] mx-auto">
                             </a>
                         </div>
