@@ -29,6 +29,15 @@ const HomePage = {
                         <div class="mySlides">
                             <img src="https://picsum.photos/1440/420" class="image">
                         </div>
+                        <div class="mySlides">
+                            <img src="https://picsum.photos/1440/420" class="image">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://picsum.photos/1440/420" class="image">
+                        </div>
+                        <div class="mySlides">
+                            <img src="https://picsum.photos/1440/420" class="image">
+                        </div>
 
                         <a class="prev" onclick="plusSlides(-1)">❮</a>
                         <a class="next" onclick="plusSlides(1)">❯</a>
@@ -69,7 +78,7 @@ const HomePage = {
             </div>
             <!-- end banner -->
             <div class="max-w-[1440px] mx-auto">
-
+                
             </div>
         </main>
         ${Footer.render()}
