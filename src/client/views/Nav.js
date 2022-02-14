@@ -9,7 +9,7 @@ const Nav = {
                                 <li><a href="" class="menu-item">Trang chủ</a></li>
                                 
                                 <li class="group">
-                                    <a href="" class="menu-item">Điện Thoại
+                                    <a href="" class="menu-item">Điện thoại
                                         <i class="fas fa-angle-down"></i>
                                     </a>
                                     <div
