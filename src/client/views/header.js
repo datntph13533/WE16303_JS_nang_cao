@@ -8,7 +8,7 @@ const Header = {
                 <div class="max-w-[1440px] mx-auto text-[15px] leading-[20px]">
                     <div class="grid grid-cols-3 gap-5 mt-4 mb-4">
                         <div class="grid grid-cols-2 mx-auto">
-                            <p class="mr-[10px]">Bạn đang xem giá, tồn kho tại:</p>
+                            <p class="mr-[10px]">Bạn đang xem giá, tồn kho tại</p>
                             <div class="location-dropdown">
                                 <div class="location-dropdown-title">
                                     <select class="location_name border-none bg-none text-[#c6992f]">
@@ -41,7 +41,7 @@ const Header = {
                     <div class="grid grid-cols-3">
                         <div class="my-[15px]">
                             <a href="">
-                                <img src="./src/image/NTĐ (3).png" alt="" class="w-[70px] h-[70px] mx-auto">
+                                <img src="./src/image/NTĐ (3).png" alt="./src/image/NTĐ (3).png" class="w-[70px] h-[70px] mx-auto">
                             </a>
                         </div>
                         <div class="h-[35px] my-[35px] bg-white">
