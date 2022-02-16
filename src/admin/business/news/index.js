@@ -2,8 +2,8 @@ import data from "../../../data";
 import NavAdmin from "../../views/nav";
 
 const AdminListNew = {
-    render() {
-        return /* html */ `
+        render() {
+            return /* html */ `
         <div class="min-h-full">
             ${NavAdmin.render()}
             <header class="bg-white shadow">
@@ -52,12 +52,19 @@ const AdminListNew = {
                                             </tr>
                                         </thead>
                                         <tbody class="bg-white divide-y divide-gray-200">
-                                        ${data.map((post) => /* html */`
+                                        ${data
+                                          .map(
+                                            (post) => /* html */ `
                                             <tr>
                                                 <td class="px-9 py-4 whitespace text-sm text-gray-500">${post.id}</td>
                                                 <td class="px-6 py-4 whitespace">
                                                     <div class="flex items-center">
                                                         ${post.title}
+                                                    </div>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace w-[240px]">
+                                                    <div class="flex items-center ">
+                                                        <img src="${post.img}" alt="" class="w-[240px] h-[80px]">
                                                     </div>
                                                 </td>
                                                 <td class="px-6 py-4 whitespace">
@@ -72,7 +79,9 @@ const AdminListNew = {
                                                     </div>
                                                 </td>
                                             </tr>
-                                        `).join("")}
+                                        `
+                                          )
+                                          .join("")}
                                         </tbody>
                                     </table>
                                 </div>
@@ -83,6 +92,6 @@ const AdminListNew = {
             </main>
         </div>
         `;
-    },
+  },
 };
 export default AdminListNew;

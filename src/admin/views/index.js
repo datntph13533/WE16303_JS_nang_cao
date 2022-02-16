@@ -2,7 +2,7 @@ import NavAdmin from "./nav";
 
 const AdminDashboard = {
     render() {
-        return /* html */`
+        return /* html */ `
         <div class="min-h-full">
         ${NavAdmin.render()}
             <header class="bg-white shadow">
