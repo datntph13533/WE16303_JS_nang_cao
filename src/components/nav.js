@@ -7,7 +7,7 @@ const Nav = {
             <ul class="flex">
                 <li><a href="/" class="block py-3 px-4 text-white hover:bg-blue-500">Home Page</a></li>
                 <li><a href="/about" class="block py-3 px-4 text-white hover:bg-blue-500">About Page</a></li>
-                <li><a href="/product" class="block py-3 px-4 text-white hover:bg-blue-500">Product Page</a></li>
+                <li><a href="/products" class="block py-3 px-4 text-white hover:bg-blue-500">Product Page</a></li>
             </ul>
             ${localStorage.getItem("user") ? `<ul class="flex">
             <li class="flex items-center">Xin chao <span class="block py-3 px-4 text-white" id="email">datlt</span></li>

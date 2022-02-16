@@ -11,7 +11,7 @@ const Signin = {
         <div id="header">
             ${Header.render()}
         </div>
-        <form id="formSignup">
+        <form id="formSignin">
         <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 border border-gray-400 my-[10px]">
             <div class="max-w-md w-full space-y-8">
                 <div>
@@ -55,7 +55,7 @@ const Signin = {
         `;
     },
     afterRender() {
-        $("#formSignup").addEventListener("submit", async (e) => {
+        $("#formSignin").addEventListener("submit", async (e) => {
             e.preventDefault();
             try {
                 // call api, nếu đăng nhập thành công sẽ trả về object data
@@ -67,9 +67,9 @@ const Signin = {
                 toastr.success("Đăng nhập thành công, chuyển trang sau 2s");
                 setTimeout(() => {
                     if (data.user.id === 1) {
-                        document.location.href = "/#/";
+                        document.location.href = "/admin/news";
                     } else {
-                        document.location.href = "/#/";
+                        document.location.href = "/";
                     }
                 }, 2000);
             } catch (error) {

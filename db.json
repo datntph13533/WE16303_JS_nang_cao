@@ -1,25 +1,52 @@
 {
   "posts": [
     {
+      "createdAt": "2022-01-10T07:26:52.549Z",
+      "title": "Annie Stroman",
+      "img": "http://placeimg.com/640/480/fashion",
+      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "id": "1",
+      "categoryPostId": 1
+    },
+    {
+      "createdAt": "2022-01-10T20:33:27.477Z",
+      "title": "Yolanda Roob",
+      "img": "http://placeimg.com/640/480/sports",
+      "desc": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "id": "2",
+      "categoryPostId": 1
+    },
+    {
+      "createdAt": "2022-01-10T20:33:27.477Z",
+      "title": "Yolanda 1",
+      "img": "http://placeimg.com/640/480/sports",
+      "desc": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "id": "100",
+      "categoryPostId": 1
+    },
+    {
       "createdAt": "2022-01-11T03:36:13.571Z",
       "title": "Rufus Konopelski",
       "img": "http://placeimg.com/640/480/transport",
       "desc": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "id": "3"
+      "id": "3",
+      "categoryPostId": 2
     },
     {
       "createdAt": "2022-01-10T04:45:32.422Z",
       "title": "Ray Boyle",
       "img": "http://placeimg.com/640/480/transport",
       "desc": "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
-      "id": "4"
+      "id": "4",
+      "categoryPostId": 2
     },
     {
       "createdAt": "2022-01-10T10:56:22.073Z",
       "title": "Jacqueline Hills",
       "img": "http://placeimg.com/640/480/fashion",
       "desc": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
-      "id": "5"
+      "id": "5",
+      "categoryPostId": 2
     },
     {
       "createdAt": "2022-01-11T00:27:12.664Z",
@@ -104,18 +131,55 @@
       "img": "http://placeimg.com/640/480/nightlife",
       "desc": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
       "id": "17"
+    },
+    {
+      "title": "bai viet moi 1",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644310015/tmidn2vyavd7uasurvsz.png",
+      "desc": "Noi dung bai viet moi 1",
+      "id": "Fhb4ltM"
+    }
+  ],
+  "categoryPosts": [
+    {
+      "id": 1,
+      "name": "Danh muc bai viet 1"
+    },
+    {
+      "id": 2,
+      "name": "Danh muc bai viet 2"
     }
   ],
   "users": [
     {
       "email": "nguyenthanhdat27042002@gmail.com",
-      "password": "$2a$10$uG3emS51eNQUFl0GjGt.8uQdWlrg9h5xKvMH/rGF5EFb31A1wCgiG",
+      "password": "$2a$10$RZPQW0/DRGUpo9k2R9V2M.x4sMDI0rHkfXeXtjPomNKucvki9s9DG",
       "id": 1
+    }
+  ],
+  "products": [
+    {
+      "createdAt": "2022-01-10T07:26:52.549Z",
+      "name": "Product A",
+      "img": "http://placeimg.com/640/480/fashion",
+      "price": "100",
+      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "id": "1"
     },
     {
-      "email": "toilaai27042002@gmail.com",
-      "password": "$2a$10$RywaAK9BFhun7s9DQ8YmGuGOfjv9RV0649ztI/RDXxzTx3.aS9Gfy",
-      "id": 2
+      "createdAt": "2022-01-10T07:26:52.549Z",
+      "name": "Product B",
+      "img": "http://placeimg.com/640/480/fashion",
+      "price": "200",
+      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "id": "2"
+    },
+    {
+      "createdAt": "2022-01-10T07:26:52.549Z",
+      "name": "Product C",
+      "img": "http://placeimg.com/640/480/fashion",
+      "price": "300",
+      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "id": "3"
     }
   ]
 }

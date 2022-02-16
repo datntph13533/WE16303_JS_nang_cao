@@ -2,8 +2,11 @@ import Navigo from "navigo";
 import AboutPage from "./pages/about";
 import AdminPost from "./pages/admin/posts";
 import AddPost from "./pages/admin/posts/add";
+import CartPage from "./pages/cart";
 import HomePage from "./pages/home";
 import NewsDetail from "./pages/newsDetail";
+import ProductsPage from "./pages/products";
+import ProductDetailPage from "./pages/products/detal";
 import Signin from "./pages/signin";
 import Signup from "./pages/signup";
 
@@ -12,7 +15,7 @@ const router = new Navigo("/", { linksSelector: "a", hash: true });
 const print = async (content, id) => {
     document.getElementById("content").innerHTML = await content.render(id);
 
-    if (content.afterRender) content.afterRender();
+    if (content.afterRender) content.afterRender(id);
 };
 
 router.on("/admin/*/", () => {
@@ -49,6 +52,12 @@ router.on({
         const { id } = data;
         print(NewsDetail, id);
     },
+    "/products": () => print(ProductsPage),
+    "/products/:id": ({ data }) => {
+        const { id } = data;
+        print(ProductDetailPage, id);
+    },
+    "/cart": () => print(CartPage),
     "/admin/news": () => {
         print(AdminPost);
     },
