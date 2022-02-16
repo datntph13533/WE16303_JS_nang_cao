@@ -6,7 +6,7 @@ import HomePage from "./client/business/home";
 
 const router = new Navigo("/", { linksSelector: "a", hash: true });
 
-const print = async(content, id) => {
+const print = async (content, id) => {
     document.getElementById("content").innerHTML = await content.render(id);
 
     if (content.afterRender) content.afterRender(id);
