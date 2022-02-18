@@ -1,155 +1,80 @@
+import { getAll } from "../../Api/cates";
+import { reRender } from "../../utils/rerender";
+
 const Nav = {
-    render() {
+    async render() {
+        const response = await getAll();
         return /* html */ `
+            <div class="bg-white h-[50px] mb-[10px]">
+                <div class="max-w-[1440px] mx-auto text-[15px] leading-[20px]">
+                    <div class="grid grid-cols-3 gap-5 mt-4 mb-4">
+                        <div class="grid grid-cols-2 mx-auto">
+                            <p class="mr-[10px]">Bạn đang xem giá, tồn kho tại</p>
+                            <div class="location-dropdown">
+                                <div class="location-dropdown-title">
+                                    <select class="location_name border-none bg-none text-[#c6992f]">
+                                        <option value="1" selected="" class="bg-[#c69a39] text-[#fff]">Hà Nội</option>
+                                        <option value="2" class="bg-[#c69a39] text-[#fff]">Hồ Chí Minh</option>
+                                        <option value="3" class="bg-[#c69a39] text-[#fff]">Đà Nẵng</option>
+                                    </select>
+                                </div>
+                                <div class="location-dropdown-list hidden">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 text-center">
+                            <p>Hotline: <span class="text-[#f1aa0c]">HN: 0969.120.120 - SG: 0965.123.123 - ĐN:
+                                    096.123.9797 - CSKH Online
+                                    037.462.9999 - 096.539.7966</span></p>
+                        </div>
+                        <div class="grid grid-cols-1 mx-auto">
+                        ${localStorage.getItem("user") ? `<ul class="flex">
+                            <li class="flex items-center">Xin chao <span class="block py-3 px-4" id="email"></span></li>
+                            <li><a class="block py-3 px-4" id="logout">logout</a></li>
+                        </ul>` : `<ul class="flex">
+                                <li class="mx-4"><a href="/signup">Đăng ký</a></li>
+                                <li class="mx-4 text-[#f1aa0c]"><a href="">|</a></li>
+                                <li class="mx-4"><a href="/signin">Đăng nhập</a></li>
+                            </ul>`} 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#c69a39] h-[100px]">
+                <div class="max-w-[1440px] mx-auto">
+                    <div class="grid grid-cols-3">
+                        <div class="my-[15px]">
+                            <a href="/">
+                                <img src="../../../src/image/NTĐ (3).png" alt="" class="w-[70px] h-[70px] mx-auto">
+                            </a>
+                        </div>
+                        <div class="h-[35px] my-[35px] bg-white">
+                            <form method="get">
+                                <input type="text" class="w-[450px] h-[35px] pl-[10px]" name="keyword" id="keyword"
+                                    autocomplete="off" placeholder="Tìm kiếm sản phẩm ...">
+                                <button type="submit" class="btn-search">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="my-auto mx-auto">
+                            <a href="" class="flex">
+                                <i class="fas fa-shopping-cart text-[35px] mr-[10px]"></i>
+                                <p class="text-[20px]">Cart</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="bg-[#daab47] h-[50px]">
                 <div class="max-w-[1440px] mx-auto">
                     <div class="flex justify-center">
                         <nav class="">
                             <ul class="flex h-[50px] oy-2">
                                 <li><a href="" class="menu-item">Trang chủ</a></li>
-                                
-                                <li class="group">
-                                    <a href="" class="menu-item">Điện thoại
-                                        <i class="fas fa-angle-down"></i>
-                                    </a>
-                                    <div
-                                        class="grid grid-cols-3 p-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Apple (iPhone) - Quốc tế</a></li>
-                                            <li><a href="" class="sub-menu-item">Apple (iPhone) - Lock</a></li>
-                                            <li><a href="" class="sub-menu-item">Xiaomi</a></li>
-                                            <li><a href="" class="sub-menu-item">OPPO</a></li>
-                                            <li><a href="" class="sub-menu-item">Realme</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Samsung</a></li>
-                                            <li><a href="" class="sub-menu-item">Vivo</a></li>
-                                            <li><a href="" class="sub-menu-item">OnePlus</a></li>
-                                            <li><a href="" class="sub-menu-item">Asus</a></li>
-                                            <li><a href="" class="sub-menu-item">Nokia</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">BKav</a></li>
-                                            <li><a href="" class="sub-menu-item">ZTE (Nubia)</a></li>
-                                            <li><a href="" class="sub-menu-item">LG</a></li>
-                                            <li><a href="" class="sub-menu-item">Sony</a></li>
-                                            <li><a href="" class="sub-menu-item">Google</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li class="group">
-                                    <a href="" class="menu-item">Tablet
-                                        <i class="fas fa-angle-down"></i>
-                                    </a>
-                                    <div
-                                        class="grid grid-cols-2 px-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">iPad Pro</a></li>
-                                            <li><a href="" class="sub-menu-item">iPad 10.2</a></li>
-                                            <li><a href="" class="sub-menu-item">iPad Air</a></li>
-                                            <li><a href="" class="sub-menu-item">iPad mini</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Samsung</a></li>
-                                            <li><a href="" class="sub-menu-item">Lenovo</a></li>
-                                            <li><a href="" class="sub-menu-item">Xiaomi</a></li>
-                                            <li><a href="" class="sub-menu-item">Máy đọc sách</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li class="group">
-                                    <a href="" class="menu-item">Laptop, PC, Màn hình
-                                        <i class="fas fa-angle-down"></i>
-                                    </a>
-                                    <div
-                                        class="grid grid-cols-3 px-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Mac</a></li>
-                                            <li><a href="" class="sub-menu-item">Dell</a></li>
-                                            <li><a href="" class="sub-menu-item">Asus</a></li>
-                                            <li><a href="" class="sub-menu-item">Acer</a></li>
-                                            <li><a href="" class="sub-menu-item">Lenovo</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">HP</a></li>
-                                            <li><a href="" class="sub-menu-item">Microsoft Surface</a></li>
-                                            <li><a href="" class="sub-menu-item">LG</a></li>
-                                            <li><a href="" class="sub-menu-item">Msi</a></li>
-                                            <li><a href="" class="sub-menu-item">Gigabyte</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Máy tính để bàn</a></li>
-                                            <li><a href="" class="sub-menu-item">Màn hình</a></li>
-                                            <li><a href="" class="sub-menu-item">Máy in</a></li>
-                                            <li><a href="" class="sub-menu-item">Linh kiện máy tính</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li class="group">
-                                    <a href="" class="menu-item">Đồng hồ
-                                        <i class="fas fa-angle-down"></i>
-                                    </a>
-                                    <div
-                                        class="grid grid-cols-2 px-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Apple Watch</a></li>
-                                            <li><a href="" class="sub-menu-item">Samsung</a></li>
-                                            <li><a href="" class="sub-menu-item">Garmin</a></li>
-                                            <li><a href="" class="sub-menu-item">Xiaomi</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Amazfit</a></li>
-                                            <li><a href="" class="sub-menu-item">OPPO</a></li>
-                                            <li><a href="" class="sub-menu-item">Realme</a></li>
-                                            <li><a href="" class="sub-menu-item">Đồng hồ định vị trẻ em</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li class="group">
-                                    <a href="" class="menu-item">Âm thanh
-                                        <i class="fas fa-angle-down"></i>
-                                    </a>
-                                    <div
-                                        class="grid grid-cols-1 px-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Loa</a></li>
-                                            <li><a href="" class="sub-menu-item">Tai nghe</a></li>
-                                            <li><a href="" class="sub-menu-item">Phụ kiện</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
-                                <li class="group">
-                                    <a href="" class="menu-item">Phụ kiện
-                                        <i class="fas fa-angle-down"></i>
-                                    </a>
-                                    <div
-                                        class="grid grid-cols-3 px-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Phụ kiện Apple</a></li>
-                                            <li><a href="" class="sub-menu-item">Dán màn hình</a></li>
-                                            <li><a href="" class="sub-menu-item">Cáp, sạc</a></li>
-                                            <li><a href="" class="sub-menu-item">Thiết bị mạng</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Camera</a></li>
-                                            <li><a href="" class="sub-menu-item">Bao da, ốp lưng</a></li>
-                                            <li><a href="" class="sub-menu-item">Day đeo đồng hồ</a></li>
-                                            <li><a href="" class="sub-menu-item">Phụ kiện chụp ảnh</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Chuột, bàn phím</a></li>
-                                            <li><a href="" class="sub-menu-item">Thẻ nhớ, USB</a></li>
-                                            <li><a href="" class="sub-menu-item">Phụ kiện laptop</a></li>
-                                            <li><a href="" class="sub-menu-item">Balo, túi xách</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-
+                                ${response.data.map((post) => /* html */ `
+                                <li><a href="" class="menu-item">${post.title}</a></li>
+                                `).join("")}
                                 <li><a href="" class="menu-item">Tin tức công nghệ</a></li>
                                 <li><a href="" class="menu-item">Liên hệ</a></li>
                             </ul>
@@ -158,6 +83,19 @@ const Nav = {
                 </div>
             </div>
         `;
+    },
+    afterRender() {
+        const email = document.querySelector("#email");
+        const logout = document.querySelector("#logout");
+        if (email) {
+            email.innerHTML = JSON.parse(localStorage.getItem("user")).email;
+        }
+        if (logout) {
+            logout.addEventListener("click", () => {
+                localStorage.removeItem("user");
+                reRender(Nav, "#main-menu");
+            });
+        }
     },
 };
 export default Nav;

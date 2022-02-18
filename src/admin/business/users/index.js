@@ -1,8 +1,8 @@
-import { getAll, remove } from "../../../Api/posts";
+import { getAll, remove } from "../../../Api/users";
 import { reRender } from "../../../utils/rerender";
 import NavAdmin from "../../views/nav";
 
-const AdminListNew = {
+const AdminListUser = {
     async render() {
         const { data } = await getAll();
         return /* html */ `
@@ -13,11 +13,11 @@ const AdminListNew = {
                     <div class="lg:flex lg:items-center lg:justify-between">
                         <div class="flex-1 min-w-0">
                         <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-2xl sm:truncate uppercase">
-                            Quản lý tin tức
+                            Quản lý tài khoản
                         </h2>
                         </div>
                         <div class="mt-5 flex lg:mt-0 lg:ml-4">
-                        <a href="/admin/news/add" class="sm:ml-3">
+                        <a href="/admin/user/add" class="sm:ml-3">
                             <button type="button"
                             class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             Thêm mới
@@ -40,13 +40,16 @@ const AdminListNew = {
                                                 ID
                                                 </th>
                                                 <th scope="col" class="px-9 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                tiêu đề
+                                                tên khách hàng
+                                                </th>
+                                                <th scope="col" class="px-9 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                tài khoản gmail
                                                 </th>
                                                 <th scope="col" class="px-9 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                                 hình ảnh
                                                 </th>
                                                 <th scope="col" class="px-9 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                nội dung
+                                                chức vụ
                                                 </th>
                                                 <th scope="col" class="px-9 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                                 Role
@@ -59,22 +62,27 @@ const AdminListNew = {
                                                 <td class="px-9 py-4 whitespace text-sm text-gray-500">${post.id}</td>
                                                 <td class="px-6 py-4 whitespace">
                                                     <div class="flex items-center">
-                                                        ${post.title}
-                                                    </div>
-                                                </td>
-                                                <td class="px-6 py-4 whitespace w-[240px]">
-                                                    <div class="flex items-center ">
-                                                        <img src="${post.img}" alt="" class="w-[240px] h-[80px]">
+                                                        ${post.name}
                                                     </div>
                                                 </td>
                                                 <td class="px-6 py-4 whitespace">
                                                     <div class="flex items-center">
-                                                        ${post.desc}
+                                                        ${post.email}
+                                                    </div>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace w-[200px]">
+                                                    <div class="flex items-center ">
+                                                        <img src="${post.img}" alt="" class="w-[200px] h-[80px]">
+                                                    </div>
+                                                </td>
+                                                <td class="px-6 py-4 whitespace">
+                                                    <div class="flex items-center">
+                                                        ${post.roleId}
                                                     </div>
                                                 </td>
                                                 <td class="px-6 py-4 whitespace-nowrap">
                                                     <div class="flex items-center">
-                                                        <a href="/admin/news/${post.id}/edit" class="text-amber-500 hover:text-amber-600 mx-[10px]">EDIT</a>
+                                                        <a href="/admin/user/${post.id}/edit" class="text-amber-500 hover:text-amber-600 mx-[10px]">EDIT</a>
                                                         <button data-id="${post.id}" class="btn text-red-500 hover:text-red-600 mx-[10px]">DELETE</button>
                                                     </div>
                                                 </td>
@@ -99,11 +107,11 @@ const AdminListNew = {
                 const confirm = window.confirm("Bạn có chắc chắn không??");
                 if (confirm) {
                     remove(id).then(() => {
-                        reRender(AdminListNew, "#content");
+                        reRender(AdminListUser, "#content");
                     });
                 }
             });
         });
     },
 };
-export default AdminListNew;
+export default AdminListUser;

@@ -1,39 +1,84 @@
 {
-    "catagorys": [
-
-    ],
-    "products": [
-
-    ],
-    "users": [
-
-    ],
-    "comments": [
-
-    ],
-    "orders": [
-
-    ],
-    "posts": [{
-            "id": "1",
-            "title": "Vinh danh 295 sinh viên EPI Polytechnic học kỳ Spring 2018",
-            "desc": "Tối ngày 16/06/2018, Cao đẳng FPT Polytechnic Hà Nội đã tổ chức Lễ tôn vinh \"Ong vàng Poly”, tuyên dương 295 cá nhân và tập thể có thành tích xuất sắc trong học tập cũng như hoạt",
-            "img": "https://picsum.photos/280/200"
-        },
-        {
-            "id": "2",
-            "title": "Sinh viên khối ngành Kinh tế học cách \"chạm” vào cảm xúc",
-            "desc": "Với sự tham gia của chuyên gia trong lĩnh vực kinh doanh, chương trình đã thu hút đông đảo sinh viên Cao đẳng FPT Polytechnic tham dự. Đặc biệt các bạn sinh viên bị lôi cuốn bởi",
-            "img": "https://picsum.photos/280/200"
-        },
-        {
-            "id": "3",
-            "title": "Sinh viên FPoly trải nghiệm thực tế tại Mường Thanh Luxury",
-            "desc": "Với triết lý đào tạo \"Thực học – Thực nghiệp”, Cao đẳng FPT Polytechnic Đà Nẵng thường xuyên tổ chức cho sinh viên tham quan các đơn vị doanh nghiệp",
-            "img": "https://picsum.photos/280/200"
-        }
-    ],
-    "banners": [
-
-    ]
+  "categories": [
+    {
+      "title": "Điện thoại",
+      "id": 1
+    },
+    {
+      "title": "Tablet",
+      "id": 2
+    },
+    {
+      "title": "Laptop, PC, Màn hình",
+      "id": 3
+    },
+    {
+      "title": "Đồng hồ",
+      "id": 4
+    },
+    {
+      "title": "Âm thanh",
+      "id": 5
+    },
+    {
+      "title": "Phụ kiện",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "cateId": "1",
+      "title": "Sam sung galaxy note 20 untra",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645182535/zdujsfkcxlmynabu8k1b.jpg",
+      "price": "10000000",
+      "quantity": "10000",
+      "desc": "ggggggggggggggggggg",
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "email": "nguyenthanhdat27042002@gmail.com",
+      "password": "$2a$10$ldL09QUhLdgJotTnMXFVXOyODz.4WcPah.vaivzu.Vwq4KlwR13Te",
+      "name": "Thành Đạt Nguyễn",
+      "phone": "0823865962",
+      "address": "phường vạn phúc, quận hà đông, thành phó hà nội",
+      "roleId": "admin",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645171234/ljorltuqyqgepc5su6jf.jpg",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Thành Đạt Nguyễn",
+      "email": "toilaai27042002@gmail.com",
+      "password": "$2a$10$EVEpFZRQgtWxhvT3hYd3p.2w70GcCxUH2sxPSkWnWHP8pVPYzP7My",
+      "phone": "0823865962",
+      "address": "phường vạn phúc, quận hà đông, thành phó hà nội",
+      "roleId": "user",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645174669/y6gpfb0u4o87ephgxh4i.jpg"
+    }
+  ],
+  "comments": [],
+  "orders": [],
+  "posts": [
+    {
+      "title": "ggggggggggg",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645025252/zmurazfk3t6dwqtnks42.png",
+      "desc": "hhhhhhhhhhhhhhhhhhhhhhhh",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "title": "ggggggggggg",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645118464/nghquhw6og84x2g8xfi5.png",
+      "desc": "kkkkkkkkkkkkkkkkkkk"
+    },
+    {
+      "id": 4,
+      "title": "tttttggggggggggggggg",
+      "img": "undefined",
+      "desc": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+    }
+  ],
+  "banners": []
 }

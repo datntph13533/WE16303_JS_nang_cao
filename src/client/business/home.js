@@ -2,9 +2,9 @@ import Footer from "../views/footer";
 import Header from "../views/header";
 
 const HomePage = {
-    render() {
+    async render() {
         return /* html */ `
-        ${Header.render()}
+        ${await Header.render()}
         <main class="mt-[10px]">
             <div class="max-w-[1440px] mx-auto">
                 <div class="w-[1440px] h-[500px]">
