@@ -1,5 +1,6 @@
 import { getAll, remove } from "../../../Api/products";
 import { reRender } from "../../../utils/rerender";
+import { $ } from "../../../utils/selector";
 import NavAdmin from "../../views/nav";
 
 const AdminListProduct = {
@@ -65,7 +66,7 @@ const AdminListProduct = {
                                                 <td class="px-9 py-4 whitespace text-sm text-gray-500">${post.id}</td>
                                                 <td class="px-6 py-4 whitespace">
                                                     <div class="flex items-center">
-                                                        ${post.title}
+                                                        ${post.name}
                                                     </div>
                                                 </td>
                                                 <td class="px-6 py-4 whitespace w-[200px]">
@@ -85,7 +86,7 @@ const AdminListProduct = {
                                                 </td>
                                                 <td class="px-6 py-4 whitespace">
                                                     <div class="flex items-center">
-                                                        ${post.desc}
+                                                        <textarea  rows="10" cols="100" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md">${post.desc}</textarea>
                                                     </div>
                                                 </td>
                                                 <td class="px-6 py-4 whitespace-nowrap">
@@ -108,7 +109,7 @@ const AdminListProduct = {
         `;
     },
     afterRender() {
-        const btns = document.querySelectorAll(".btn");
+        const btns = $(".btn");
         btns.forEach((btn) => {
             const { id } = btn.dataset;
             btn.addEventListener("click", async () => {

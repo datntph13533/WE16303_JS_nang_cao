@@ -8,6 +8,10 @@ export const get = (id) => {
     const url = `/products/${id}`;
     return instance.get(url);
 };
+export const getProInCate = (id) => {
+    const url = `/categoryProducts/${id}?_embed=products`;
+    return instance.get(url);
+};
 export const remove = (id) => {
     const url = `/products/${id}`;
     return instance.delete(url);
@@ -21,12 +25,12 @@ export const edit = (post) => {
     return instance.put(url, post);
 };
 
-export const getAllProductsHavingBrandsCate = async () => {
-    const { data } = await instance.get("/products?_expand=catePro");
-    return data;
-};
+// export const getAllProductsHavingBrandsCate = async () => {
+//     const { data } = await instance.get("/products?_expand=catePro");
+//     return data;
+// };
 
-export const getProductsByIDHavingBrandsCate = async (id) => {
-    const { data } = await instance.get("/products?expand=catePro");
-    return data.find((item) => item.id === id);
-};
+// export const getProductsByIDHavingBrandsCate = async (id) => {
+//     const { data } = await instance.get("/products?expand=catePro");
+//     return data.find((item) => item.id === id);
+// };

@@ -1,22 +1,22 @@
 import instance from "./config";
 
 export const getAll = () => {
-    const url = "/categories";
+    const url = "/categoryProducts";
     return instance.get(url);
 };
 export const get = (id) => {
-    const url = `/categories/${id}`;
+    const url = `/categoryProducts/${id}`;
     return instance.get(url);
 };
 export const remove = (id) => {
-    const url = `/categories/${id}`;
+    const url = `/categoryProducts/${id}`;
     return instance.delete(url);
 };
 export const add = (post) => {
-    const url = `/categories`;
+    const url = `/categoryProducts`;
     return instance.post(url, post);
 };
 export const edit = (post) => {
-    const url = `/categories/${post.id}`;
+    const url = `/categoryProducts/${post.id}`;
     return instance.put(url, post);
 };

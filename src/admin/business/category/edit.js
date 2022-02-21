@@ -47,7 +47,7 @@ const EditCatePage = {
         `;
     },
     afterRender(id) {
-        const formEdit = document.querySelector("#formEdit");
+        const formEdit = $("#formEdit");
         formEdit.addEventListener("submit", async (e) => {
             e.preventDefault();
             try {

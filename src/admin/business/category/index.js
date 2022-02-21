@@ -1,5 +1,6 @@
 import { getAll, remove } from "../../../Api/cates";
 import { reRender } from "../../../utils/rerender";
+import { $ } from "../../../utils/selector";
 import NavAdmin from "../../views/nav";
 
 const AdminListCate = {
@@ -76,7 +77,7 @@ const AdminListCate = {
         `;
     },
     afterRender() {
-        const btns = document.querySelectorAll(".btn");
+        const btns = $(".btn");
         btns.forEach((btn) => {
             const { id } = btn.dataset;
             btn.addEventListener("click", async () => {

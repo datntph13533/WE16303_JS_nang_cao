@@ -41,7 +41,7 @@ const AddProductPage = {
                                     
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Tên sản phẩm <span class="text-[red]">*</span></label>
-                                            <input type="text" id="title-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
+                                            <input type="text" id="name-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
                                         </div>
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Giá <span class="text-[red]">*</span></label>
@@ -52,6 +52,12 @@ const AddProductPage = {
                                             <input type="text" id="quantity-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
                                         </div>
                                         <div>
+                                            <label class="block text-sm font-medium text-gray-700">Mô tả nhỏ <span class="text-[red]">*</span></label>
+                                            <div class="mt-1">
+                                                <textarea  rows="5" id="short_desc-product" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                            </div>
+                                        </div>
+                                        <div>
                                             <label class="block text-sm font-medium text-gray-700">Mô tả <span class="text-[red]">*</span></label>
                                             <div class="mt-1">
                                                 <textarea  rows="5" id="desc-product" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
@@ -59,8 +65,8 @@ const AddProductPage = {
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700">
-                                            Hình ảnh <span class="text-[red]">*</span>
-                                            </label>
+                                            Hình ảnh <span class="text-[red]">*</span></label>
+                                            <img src="" id="img-preview" class="w-[240px] h-[140px]"/>
                                             <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
                                                 <div class="space-y-1 text-center">
                                                     <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48"
@@ -100,33 +106,41 @@ const AddProductPage = {
         const formAdd = $("#formAdd");
         const CLOUDINARY_PRESET_KEY = "js8yqruv";
         const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dvj4wwihv/image/upload";
+        const imgPreview = $("#img-preview");
+        const imgPost = $("#file-upload");
 
+        let imgLink = "";
+        imgPost.addEventListener("change", (e) => {
+            imgPreview.src = URL.createObjectURL(e.target.files[0]);
+        });
         formAdd.addEventListener("submit", async (e) => {
             e.preventDefault();
             try {
                 const file = $("#file-upload").files[0];
-                const formData = new FormData();
-                formData.append("file", file);
-                formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
-                const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
-                    headers: {
-                        "Content-Type": "application/form-data",
-                    },
-                });
+                if (file) {
+                    const formData = new FormData();
+                    formData.append("file", file);
+                    formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
+                    const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+                        headers: {
+                            "Content-Type": "application/form-data",
+                        },
+                    });
+                    imgLink = data.url;
+                }
                 add({
-                    cateId: $("#cateId").value,
-                    title: $("#title-product").value,
-                    img: data.url,
+                    categoryProductId: $("#cateId").value,
+                    name: $("#name-product").value,
+                    img: imgLink || imgPreview.src,
                     price: $("#price-product").value,
                     quantity: $("#quantity-product").value,
+                    short_desc: $("#short_desc-product").value,
                     desc: $("#desc-product").value,
                 });
-                if ({ data }) {
-                    toastr.success("Thêm mới sản phẩm thành công, chuyển trang sau 2s");
-                    setTimeout(() => {
-                        document.location.href = "/admin/product";
-                    }, 2000);
-                }
+                toastr.success("Thêm mới sản phẩm thành công, chuyển trang sau 2s");
+                setTimeout(() => {
+                    document.location.href = "/admin/product";
+                }, 2000);
             } catch (error) {
                 toastr.error(error.response.data);
                 $("#formAdd").reset();

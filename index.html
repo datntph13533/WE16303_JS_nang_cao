@@ -16,38 +16,6 @@
         <div id="content"></div>
     </div>
     <script type="module" src="./src/main.js"></script>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            if (n > slides.length) {
-                slideIndex = 1
-            }
-            if (n < 1) {
-                slideIndex = slides.length
-            }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace("active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += "active";
-        }
-    </script>
 </body>
 
 </html>
@@ -136,142 +104,37 @@
                                     <a href="" class="menu-item">Điện thoại
                                         <i class="fas fa-angle-down"></i>
                                     </a>
-                                    <div
-                                        class="grid grid-cols-3 p-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Apple (iPhone) - Quốc tế</a></li>
-                                            <li><a href="" class="sub-menu-item">Apple (iPhone) - Lock</a></li>
-                                            <li><a href="" class="sub-menu-item">Xiaomi</a></li>
-                                            <li><a href="" class="sub-menu-item">OPPO</a></li>
-                                            <li><a href="" class="sub-menu-item">Realme</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Samsung</a></li>
-                                            <li><a href="" class="sub-menu-item">Vivo</a></li>
-                                            <li><a href="" class="sub-menu-item">OnePlus</a></li>
-                                            <li><a href="" class="sub-menu-item">Asus</a></li>
-                                            <li><a href="" class="sub-menu-item">Nokia</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">BKav</a></li>
-                                            <li><a href="" class="sub-menu-item">ZTE (Nubia)</a></li>
-                                            <li><a href="" class="sub-menu-item">LG</a></li>
-                                            <li><a href="" class="sub-menu-item">Sony</a></li>
-                                            <li><a href="" class="sub-menu-item">Google</a></li>
-                                        </ul>
-                                    </div>
                                 </li>
 
                                 <li class="group">
                                     <a href="" class="menu-item">Tablet
                                         <i class="fas fa-angle-down"></i>
                                     </a>
-                                    <div
-                                        class="grid grid-cols-2 px-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">iPad Pro</a></li>
-                                            <li><a href="" class="sub-menu-item">iPad 10.2</a></li>
-                                            <li><a href="" class="sub-menu-item">iPad Air</a></li>
-                                            <li><a href="" class="sub-menu-item">iPad mini</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Samsung</a></li>
-                                            <li><a href="" class="sub-menu-item">Lenovo</a></li>
-                                            <li><a href="" class="sub-menu-item">Xiaomi</a></li>
-                                            <li><a href="" class="sub-menu-item">Máy đọc sách</a></li>
-                                        </ul>
-                                    </div>
                                 </li>
 
                                 <li class="group">
                                     <a href="" class="menu-item">Laptop, PC, Màn hình
                                         <i class="fas fa-angle-down"></i>
                                     </a>
-                                    <div
-                                        class="grid grid-cols-3 px-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Mac</a></li>
-                                            <li><a href="" class="sub-menu-item">Dell</a></li>
-                                            <li><a href="" class="sub-menu-item">Asus</a></li>
-                                            <li><a href="" class="sub-menu-item">Acer</a></li>
-                                            <li><a href="" class="sub-menu-item">Lenovo</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">HP</a></li>
-                                            <li><a href="" class="sub-menu-item">Microsoft Surface</a></li>
-                                            <li><a href="" class="sub-menu-item">LG</a></li>
-                                            <li><a href="" class="sub-menu-item">Msi</a></li>
-                                            <li><a href="" class="sub-menu-item">Gigabyte</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Máy tính để bàn</a></li>
-                                            <li><a href="" class="sub-menu-item">Màn hình</a></li>
-                                            <li><a href="" class="sub-menu-item">Máy in</a></li>
-                                            <li><a href="" class="sub-menu-item">Linh kiện máy tính</a></li>
-                                        </ul>
-                                    </div>
                                 </li>
 
                                 <li class="group">
                                     <a href="" class="menu-item">Đồng hồ
                                         <i class="fas fa-angle-down"></i>
                                     </a>
-                                    <div
-                                        class="grid grid-cols-2 px-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Apple Watch</a></li>
-                                            <li><a href="" class="sub-menu-item">Samsung</a></li>
-                                            <li><a href="" class="sub-menu-item">Garmin</a></li>
-                                            <li><a href="" class="sub-menu-item">Xiaomi</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Amazfit</a></li>
-                                            <li><a href="" class="sub-menu-item">OPPO</a></li>
-                                            <li><a href="" class="sub-menu-item">Realme</a></li>
-                                            <li><a href="" class="sub-menu-item">Đồng hồ định vị trẻ em</a></li>
-                                        </ul>
-                                    </div>
+                            
                                 </li>
 
                                 <li class="group">
                                     <a href="" class="menu-item">Âm thanh
                                         <i class="fas fa-angle-down"></i>
                                     </a>
-                                    <div
-                                        class="grid grid-cols-1 px-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Loa</a></li>
-                                            <li><a href="" class="sub-menu-item">Tai nghe</a></li>
-                                            <li><a href="" class="sub-menu-item">Phụ kiện</a></li>
-                                        </ul>
-                                    </div>
                                 </li>
 
                                 <li class="group">
                                     <a href="" class="menu-item">Phụ kiện
                                         <i class="fas fa-angle-down"></i>
                                     </a>
-                                    <div
-                                        class="grid grid-cols-3 px-[10px] absolute bg-gray-200 border opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Phụ kiện Apple</a></li>
-                                            <li><a href="" class="sub-menu-item">Dán màn hình</a></li>
-                                            <li><a href="" class="sub-menu-item">Cáp, sạc</a></li>
-                                            <li><a href="" class="sub-menu-item">Thiết bị mạng</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Camera</a></li>
-                                            <li><a href="" class="sub-menu-item">Bao da, ốp lưng</a></li>
-                                            <li><a href="" class="sub-menu-item">Day đeo đồng hồ</a></li>
-                                            <li><a href="" class="sub-menu-item">Phụ kiện chụp ảnh</a></li>
-                                        </ul>
-                                        <ul class="p-2">
-                                            <li><a href="" class="sub-menu-item">Chuột, bàn phím</a></li>
-                                            <li><a href="" class="sub-menu-item">Thẻ nhớ, USB</a></li>
-                                            <li><a href="" class="sub-menu-item">Phụ kiện laptop</a></li>
-                                            <li><a href="" class="sub-menu-item">Balo, túi xách</a></li>
-                                        </ul>
-                                    </div>
                                 </li>
 
                                 <li><a href="" class="menu-item">Tin tức công nghệ</a></li>
@@ -282,334 +145,25 @@
                 </div>
             </div>
         </header>
-        <main class="mt-[10px]">
-            <div class="max-w-[1440px] mx-auto">
-                <div class="w-[1440px] h-[500px]">
-                    <div class="container">
-                        <div class="mySlides">
-                            <img src="https://picsum.photos/1440/420" class="image">
-                        </div>
-                        <div class="mySlides">
-                            <img src="https://picsum.photos/1440/420" class="image">
-                        </div>
-                        <div class="mySlides">
-                            <img src="https://picsum.photos/1440/420" class="image">
-                        </div>
-                        <div class="mySlides">
-                            <img src="https://picsum.photos/1440/420" class="image">
-                        </div>
-                        <div class="mySlides">
-                            <img src="https://picsum.photos/1440/420" class="image">
-                        </div>
-                        <div class="mySlides">
-                            <img src="https://picsum.photos/1440/420" class="image">
-                        </div>
-
-                        <a class="prev" onclick="plusSlides(-1)">❮</a>
-                        <a class="next" onclick="plusSlides(1)">❯</a>
-
-                        <div class="row">
-                            <div class="column">
-                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(1)">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(2)">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(3)">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(4)">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(5)">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(6)">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(7)">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(8)">
-                            </div>
-                            <div class="column">
-                                <img class="demo cursor" src="https://picsum.photos/160/80" onclick="currentSlide(9)">
-                            </div>
-                        </div>
+        <main class="my-[10px]">
+            <div class="w-[1440px] h-auto mx-auto">
+                <div class="w-[980px] h-auto mx-auto">
+                    <div class="w-[980px] py-[20px]">
+                        <h1 class="text-center uppercase text-[28px]">Tin tức công nghê</h1>
                     </div>
-                </div>
-
-            </div>
-
-            <div class="max-w-[1440px] mx-auto">
-                <div class="my-[20px]">
-                    <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>
-                    <div class="grid grid-cols-5 gap-8">
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="my-[20px]">
-                    <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>
-                    <div class="grid grid-cols-5 gap-8">
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="my-[20px]">
-                    <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>
-                    <div class="grid grid-cols-5 gap-8">
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="my-[20px]">
-                    <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>
-                    <div class="grid grid-cols-5 gap-8">
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="my-[20px]">
-                    <h2 class="font-semibold text-2xl uppercase my-4">Tin tức học tập</h2>
-                    <div class="grid grid-cols-5 gap-8">
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
-                        </div>
-                        <div class="border p-3">
-                            <a href="">
-                                <img src="http://placeimg.com/250/300/transport" alt="" />
-                            </a>
-                            <h3 class="my-3"><a href="" class="font-semibold text-lg text-orange-500 ">ahihi</a></h3>
-                            <p>ahihi</p>
+                    <div class="">
+                        <div class="w-[980px] h-[160px] mb-[20px]">
+                            <article class="flex">
+                                <div class="w-[300px] h-[160px] mr-[20px]">
+                                    <a href="">
+                                        <img src="https://picsum.photos/300/160" alt="" class="rounded-[8px]">
+                                    </a>
+                                </div>
+                                <div class="w-[660px] h-[160px]">
+                                    <h3 class="text-[25px] mr-[10px]"><a href="">Cựu CEO OnePlus ‘nhá hàng’ smartphone mang thương hiệu Nothing?</a></h3>
+                                    <p class="mt-[10px] mr-[10px]">Vào năm 2020, nhà đồng sáng lập OnePlus – ông Carl Pei đã từ chức tại OnePlus để ra thành lập công ty ...</p>
+                                </div>
+                            </article>
                         </div>
                     </div>
                 </div>
@@ -691,34 +245,6 @@
             </div>
         </footer>
     </div>
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace("active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += "active";
-        }
-    </script>
 </body>
 
 </html> -->

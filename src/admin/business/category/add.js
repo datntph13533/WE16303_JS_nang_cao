@@ -47,7 +47,7 @@ const AddCatePage = {
         `;
     },
     afterRender() {
-        const formAdd = document.querySelector("#formAdd");
+        const formAdd = $("#formAdd");
         formAdd.addEventListener("submit", async (e) => {
             e.preventDefault();
             try {

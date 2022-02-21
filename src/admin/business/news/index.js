@@ -1,5 +1,6 @@
 import { getAll, remove } from "../../../Api/posts";
 import { reRender } from "../../../utils/rerender";
+import { $ } from "../../../utils/selector";
 import NavAdmin from "../../views/nav";
 
 const AdminListNew = {
@@ -46,6 +47,9 @@ const AdminListNew = {
                                                 hình ảnh
                                                 </th>
                                                 <th scope="col" class="px-9 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                nội dung ngắn
+                                                </th>
+                                                <th scope="col" class="px-9 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                                 nội dung
                                                 </th>
                                                 <th scope="col" class="px-9 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -69,10 +73,15 @@ const AdminListNew = {
                                                 </td>
                                                 <td class="px-6 py-4 whitespace">
                                                     <div class="flex items-center">
-                                                        ${post.desc}
+                                                        ${post.short_desc}
                                                     </div>
                                                 </td>
-                                                <td class="px-6 py-4 whitespace-nowrap">
+                                                <td class="px-6 py-4 whitespace">
+                                                    <div class="flex items-center">
+                                                        <textarea  rows="10" cols="80" id="desc-post" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md">${post.desc}</textarea>
+                                                    </div>
+                                                </td>
+                                                <td class="px-4 py-4 whitespace-nowrap">
                                                     <div class="flex items-center">
                                                         <a href="/admin/news/${post.id}/edit" class="text-amber-500 hover:text-amber-600 mx-[10px]">EDIT</a>
                                                         <button data-id="${post.id}" class="btn text-red-500 hover:text-red-600 mx-[10px]">DELETE</button>
@@ -92,7 +101,7 @@ const AdminListNew = {
         `;
     },
     afterRender() {
-        const btns = document.querySelectorAll(".btn");
+        const btns = $(".btn");
         btns.forEach((btn) => {
             const { id } = btn.dataset;
             btn.addEventListener("click", async () => {

@@ -12,7 +12,11 @@ import AdminListUser from "./admin/business/users";
 import AddUsersPage from "./admin/business/users/add";
 import EditUserPage from "./admin/business/users/edit";
 import AdminDashboard from "./admin/views";
+import Blog from "./client/business/blog";
+import detailBlog from "./client/business/detailBlog";
 import HomePage from "./client/business/home";
+import ProductDetail from "./client/business/product/productDetail";
+import ProductList from "./client/business/product/productList";
 import Signin from "./client/business/signin";
 import Signup from "./client/business/signup";
 
@@ -49,6 +53,21 @@ router.on({
     },
     "/signup": () => {
         print(Signup);
+    },
+    "/blog": () => {
+        print(Blog);
+    },
+    "/blog/:id": ({ data }) => {
+        const { id } = data;
+        print(detailBlog, id);
+    },
+    "/categoryProducts/:id*": ({ data }) => {
+        const { id } = data;
+        print(ProductList, id);
+    },
+    "/products/:id*": ({ data }) => {
+        const { id } = data;
+        print(ProductDetail, id);
     },
     //-------------------------------
     // phần admin

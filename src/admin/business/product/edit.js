@@ -4,10 +4,12 @@ import NavAdmin from "../../views/nav";
 import { edit, get } from "../../../Api/products";
 import "toastr/build/toastr.min.css";
 import { $ } from "../../../utils/selector";
+import { getAll } from "../../../Api/cates";
 
 const EditProductPage = {
     async render(id) {
         const { data } = await get(id);
+        const cateList = await getAll();
         return /* html */`
         <div class="min-h-full">
         ${NavAdmin.render()}
@@ -26,18 +28,20 @@ const EditProductPage = {
                 <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
                     <div class="md:grid md:grid-cols-3 md:gap-6 ">
                         <div class="mt-5 md:mt-0 md:col-span-3 border">
-                            <form id="formEditProduct">
+                            <form id="formEdit">
                                 <div class="shadow sm:rounded-md sm:overflow-hidden">
                                     <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Tên danh mục <span class="text-[red]">*</span></label>
                                             <select name="" id="cateProductId" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md pl-[10px]">
-                                                <option value=""></option>
+                                            ${cateList.data.map((post) => `
+                                                <option value="${post.id}" ${post.id === data.categoryProductId ? "selected" : ""}>${post.title}</option>
+                                            `).join("")}
                                             </select>
                                         </div>
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Tên sản phẩm <span class="text-[red]">*</span></label>
-                                            <input type="text" id="title-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md pl-[10px]" value="${data.title}">
+                                            <input type="text" id="name-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md pl-[10px]" value="${data.name}">
                                         </div>
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Giá <span class="text-[red]">*</span></label>
@@ -46,6 +50,12 @@ const EditProductPage = {
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Số lượng <span class="text-[red]">*</span></label>
                                             <input type="text" id="quantity-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md pl-[10px]" value="${data.quantity}">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700">Mô tả nhỏ <span class="text-[red]">*</span></label>
+                                            <div class="mt-1">
+                                                <textarea  rows="5" id="short_desc-product" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md pl-[10px]">${data.short_desc}</textarea>
+                                            </div>
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700">Mô tả <span class="text-[red]">*</span></label>
@@ -57,7 +67,8 @@ const EditProductPage = {
                                             <label class="block text-sm font-medium text-gray-700">
                                             Hình ảnh <span class="text-[red]">*</span>
                                             </label>
-                                            <img src="${data.img}" class="w-[240px] h-[140px]"/>
+                                            <img src="${data.img}" id="img-preview" class="w-[240px] h-[140px]"/>
+                                            <input type="hidden" name="oldImage" value="${data.img}">
                                             <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
                                                 <div class="space-y-1 text-center">
                                                     <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48"
@@ -82,7 +93,7 @@ const EditProductPage = {
                                     </div>
                                     <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                                         <a href="/admin/product" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Hủy</a>
-                                        <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Thêm mới</button>
+                                        <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Cập nhật</button>
                                     </div>
                                 </div>
                             </form>
@@ -94,34 +105,47 @@ const EditProductPage = {
         `;
     },
     afterRender(id) {
-        const formEditProduct = $("#formEditProduct");
+        const formEdit = $("#formEdit");
         const CLOUDINARY_PRESET_KEY = "js8yqruv";
         const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dvj4wwihv/image/upload";
+        const imgPreview = $("#img-preview");
+        const imgPost = $("#file-upload");
 
-        formEditProduct.addEventListener("submit", async (e) => {
+        let imgLink = "";
+        imgPost.addEventListener("change", (e) => {
+            imgPreview.src = URL.createObjectURL(e.target.files[0]);
+        });
+        formEdit.addEventListener("submit", async (e) => {
             e.preventDefault();
             try {
                 const file = $("#file-upload").files[0];
-                const formData = new FormData();
-                formData.append("file", file);
-                formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
-                const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
-                    headers: {
-                        "Content-Type": "application/form-data",
-                    },
-                });
+                if (file) {
+                    const formData = new FormData();
+                    formData.append("file", file);
+                    formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
+                    const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+                        headers: {
+                            "Content-Type": "application/form-data",
+                        },
+                    });
+                    imgLink = data.url;
+                } else {
+                    imgLink = formEdit.oldImage.value;
+                }
                 edit({
                     id,
-                    title: $("#title-post").value,
-                    img: data.url,
-                    desc: $("#desc-post").value,
+                    categoryProductId: $("#cateProductId").value,
+                    name: $("#name-product").value,
+                    img: imgLink,
+                    price: $("#price-product").value,
+                    quantity: $("#quantity-product").value,
+                    short_desc: $("#short_desc-product").value,
+                    desc: $("#desc-product").value,
                 });
-                if ({ data }) {
-                    toastr.success("Cập nhật bài viết thành công, chuyển trang sau 2s");
-                    setTimeout(() => {
-                        document.location.href = "/admin/news";
-                    }, 2000);
-                }
+                toastr.success("Cập nhật sản phẩm thành công, chuyển trang sau 2s");
+                setTimeout(() => {
+                    document.location.href = "/admin/product";
+                }, 2000);
             } catch (error) {
                 toastr.error(error.response.data);
             }

@@ -1,83 +1,117 @@
 {
-  "categories": [
+  "products": [
     {
-      "title": "Điện thoại",
-      "id": 1
+      "id": 3,
+      "categoryProductId": "3",
+      "name": "hhhhhhhhhhhhhhhhh",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645417592/ayfppilnemzjn3qdmlq5.webp",
+      "price": "10000",
+      "quantity": "1000000",
+      "short_desc": "gggggggggggggg",
+      "desc": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
     },
     {
-      "title": "Tablet",
-      "id": 2
-    },
-    {
-      "title": "Laptop, PC, Màn hình",
-      "id": 3
-    },
-    {
-      "title": "Đồng hồ",
+      "categoryProductId": "1",
+      "name": "ggggggggggggggggggggg",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645419775/fylryrsth0a5j9amaqak.jpg",
+      "price": "10000000",
+      "quantity": "10000",
+      "short_desc": "dddddddddddddđ",
+      "desc": "dddddddddddddddd",
       "id": 4
     },
     {
-      "title": "Âm thanh",
+      "categoryProductId": "1",
+      "name": "ggggggggggggggggggggg",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645419792/awsrkstmvysj2iwuzc8x.jpg",
+      "price": "10000000",
+      "quantity": "10000",
+      "short_desc": "ddddddddddddddd",
+      "desc": "dddddddddd",
       "id": 5
     },
     {
-      "title": "Phụ kiện",
+      "categoryProductId": "1",
+      "name": "ggggggggggggggggggggg",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645419841/fzmpxpvyvnxiannxkrot.jpg",
+      "price": "10000000",
+      "quantity": "100000",
+      "short_desc": "hhhhhhhhhhhhhhhhhh",
+      "desc": "hhhhhhhhhhhhhhhhhhhhhhhhh",
       "id": 6
     }
   ],
-  "products": [
+  "categoryProducts": [
     {
-      "cateId": "1",
-      "title": "Sam sung galaxy note 20 untra",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645182535/zdujsfkcxlmynabu8k1b.jpg",
-      "price": "10000000",
-      "quantity": "10000",
-      "desc": "ggggggggggggggggggg",
-      "id": 1
+      "title": "Điện thoại",
+      "id": "1"
+    },
+    {
+      "title": "Tablet",
+      "id": "2"
+    },
+    {
+      "title": "Laptop, PC, Màn hình",
+      "id": "3"
+    },
+    {
+      "title": "Đồng hồ",
+      "id": "4"
+    },
+    {
+      "title": "Âm thanh",
+      "id": "5"
+    },
+    {
+      "title": "Phụ kiện",
+      "id": "6"
     }
   ],
   "users": [
     {
+      "id": 1,
+      "name": "Thành Đạt Nguyễn22",
       "email": "nguyenthanhdat27042002@gmail.com",
-      "password": "$2a$10$ldL09QUhLdgJotTnMXFVXOyODz.4WcPah.vaivzu.Vwq4KlwR13Te",
-      "name": "Thành Đạt Nguyễn",
+      "password": "$2a$10$3sEJKHSKA.Fb1.FDyoXAZev3FWQfl5TWzVk3eRYrivsOaxyWqwyUq",
       "phone": "0823865962",
       "address": "phường vạn phúc, quận hà đông, thành phó hà nội",
       "roleId": "admin",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645171234/ljorltuqyqgepc5su6jf.jpg",
-      "id": 1
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645171234/ljorltuqyqgepc5su6jf.jpg"
     },
     {
       "id": 2,
       "name": "Thành Đạt Nguyễn",
       "email": "toilaai27042002@gmail.com",
-      "password": "$2a$10$EVEpFZRQgtWxhvT3hYd3p.2w70GcCxUH2sxPSkWnWHP8pVPYzP7My",
+      "password": "$2a$10$hvaScjY0w5QaF9Cbywu0zesKsU.lSeDPicRqD2GsiJAB.zZfhh6iu",
       "phone": "0823865962",
       "address": "phường vạn phúc, quận hà đông, thành phó hà nội",
-      "roleId": "user",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645174669/y6gpfb0u4o87ephgxh4i.jpg"
+      "roleId": "admin",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645185829/acb21xzdizdjvddsrwme.jpg"
     }
   ],
   "comments": [],
   "orders": [],
   "posts": [
     {
-      "title": "ggggggggggg",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645025252/zmurazfk3t6dwqtnks42.png",
-      "desc": "hhhhhhhhhhhhhhhhhhhhhhhh",
-      "id": 2
+      "id": 1,
+      "title": "Cựu CEO OnePlus ‘nhá hàng’ smartphone mang thương hiệu Nothing?",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645279838/w2v33j4vvjntpmwqltum.jpg",
+      "desc": "<p>Vào năm 2020, nhà đồng sáng lập OnePlus – ông Carl Pei đã từ chức tại OnePlus để ra thành lập công ty riêng. Công ty mới của ông mang tên Nothing và có trụ sở tại Luân Đôn, Anh. Carl Pei định hướng công ty mới của ông sẽ tập trung vào mảng công nghệ tiêu dùng với các thiết bị thông minh nằm trong cùng một hệ sinh thái.</p> <p class='mt-[10px]'>Sau một thời gian thành lập và phát triển, Nothing đã cho ra sản phẩm đầu tay là chiếc tai nghe không dây Nothing Ear (1) có chống ồn chủ động với mức giá chỉ 99$. Tuy nhiên vì là một thương hiệu mới nên quy mô bán ra của sản phẩm không lớn, vẫn còn ít người biết đến được thương hiệu này. Gần đây, Nothing cũng đã có quyền sở hữu lại thương hiệu smartphone Essential của Andy Rubin. Với việc Nothing mua lại Essential, nhiều người đã nhận định rằng, Carl Pei sẽ cho ra những smartphone thương hiệu Nothing trong thời gian tới đây.</p>  <p class='mt-[10px]'>Tuy nhiên, là một công ty rất kín tiếng, chúng ta có rất ít thông tin về Nothing và các sản phẩm sẽ ra mắt của hãng. Hầu hết các thông tin có được đến từ những dòng tweet của CEO Carl Pei. Mới đây, Carl Pei đã có dòng tweet mới “úp mở”  về chiếc điện thoại sắp ra mắt tới đây. Ông đã đưa ra một loạt các tweet lạ như Back on Android (trở lại với Android) và Android is awesome (Android thật tuyệt vời). Điều quan trọng mặc dù đây là những dòng tweet không đầu không đuôi nhưng lại được @Android và @Snapdragon hưởng ứng. Điều này càng chứng minh rõ ràng hơn việc Nothing đang lên kế hoạch cho một chiếc điện thoại mới chạy Android và sử dụng chip từ Qualcomm.</p> <p class='mt-[10px]'>Ngoài ra, chúng ta vẫn chưa có thêm bất cứ thông tin gì về chiếc điện thoại của hãng công nghệ này. Đã có nhiều đồn đoán rằng Nothing sẽ cho ra mắt điện thoại thông minh vào đầu năm nay nhưng tuy nhiên tin đồn này đã sớm bị bác bỏ. Nothing gây ra một hiệu ứng tò mò rất lớn đối với các tín đồ công nghệ, họ thực sự rất chặt chẽ, không có một thông tin cụ thể nào về những sản phẩm mới. Và với kinh nghiệm lâu năm của Carl Pei tại OnePlus, các tín đồ công nghệ nói chung ngày càng thêm mong chờ về sản phẩm sắp tới của Nothing. Liệu rằng chúng ta sẽ có thêm một OnePlus thứ hai, những flagship killer thực thụ trong thời gian tới? Vẫn còn rất sớm để trả lời câu hỏi này.</p>",
+      "short_desc": "Vào năm 2020, nhà đồng sáng lập OnePlus – ông Carl Pei đã từ chức tại OnePlus để ra thành lập công ty ..."
     },
     {
-      "id": 3,
-      "title": "ggggggggggg",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645118464/nghquhw6og84x2g8xfi5.png",
-      "desc": "kkkkkkkkkkkkkkkkkkk"
+      "id": 2,
+      "title": "Tim Cook bị cổ đông phản đối vì nhận mức lương thưởng quá cao",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645324685/pq2khubz91wbwkhhoanc.jpg",
+      "desc": "    <p>Theo tài liệu nộp lên Ủy ban Chứng khoán Mỹ (SEC), CEO Apple Tim Cook có thu nhập gần 99 triệu USD trong năm 2021 vừa qua. Mức thu nhập này cao gấp 6 lần so với năm 2020 (14,8 triệu USD).</p><p class='mt-[10px]'>Các hạng mục trong tổng thu nhập của Tim Cook được liệt kê bao gồm lương cơ bản 3 triệu USD không đổi. Khoản thưởng trị giá 12 triệu USD là thành quả sau khi Apple đạt được các mục tiêu về tài chính và môi trường. Các khoản ưu đãi bao gồm di chuyển bằng máy bay, chi phí an ninh, lương hưu, bảo hiểm, nghỉ lễ có giá trị 1,39 triệu USD. Tuy nhiên, hạng mục thu nhập lớn nhất của Tim Cook đó là số cổ phiếu trị giá tới 82,3 triệu USD.</p><p class='mt-[10px]'>Mức tiền thưởng này được đánh giá là hoàn toàn phù hợp với những gì Tim Cook đã làm cho Apple. Dưới sự lãnh đạo của Cook, tổng lợi nhuận cổ đông của Apple hiện là hơn 1.000%, bao gồm cả mức tăng gần 30% của giá cổ phiếu Apple trong 12 tháng qua. Vào đầu năm 2022, Apple dưới sự lãnh đạo của ông đã làm nên lịch sử và trở thành công ty đầu tiên ở Mỹ đạt giá trị thị trường vượt ngưỡng 3000 tỷ USD.</p><p class='mt-[10px]'>Tuy nhiên, trong một bức thư gửi cho Financial Times vào ngày 16/01 vừa qua, ISS (Tổ chức dịch vụ cổ đông) nhận định số cổ phiếu mà Apple thưởng cho Tim Cook là “đáng lo ngại”, họ cho rằng có đến hơn một nửa tiêu chí trong đó không rõ ràng và không chính xác. Do đó, với tư cách là một tổ chức dịch vụ cổ đông, ISS đang kêu gọi ác cổ đông của Apple bỏ phiếu chống lại mức lương thưởng mà Tim Cook đã nhận trong năm vừa qua.</p><p class=\"mt-[10px]\">Thông thường, cuộc bỏ biểu của cổ đông của về khoản lương thưởng dành cho CEO chỉ mang tính chất tham khảo và hội đồng quản trị sẽ không bắt buộc phải nghe theo. Tuy nhiên Financial Times cho rằng, nếu các cổ đông đều có phản ứng dữ dội về con số gần 99 triệu USD này, hội đồng quản trị sẽ buộc phải có những hành động phù hợp để trấn an cổ đông. Phản ứng trước những thông tin của Financial Times, Apple không bình luận và từ chối đưa ra hồ sơ của công ty về chi tiết khoảng lương thưởng của Cook.</p><p class=\"mt-[10px]\">Nguồn: <b>Tổng hợp</b></p>",
+      "short_desc": "Theo tài liệu nộp lên Ủy ban Chứng khoán Mỹ (SEC), CEO Apple Tim Cook có thu nhập gần 99 triệu USD trong ..."
     },
     {
-      "id": 4,
-      "title": "tttttggggggggggggggg",
-      "img": "undefined",
-      "desc": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+      "title": "Mua điện thoại Xiaomi mới, nhận ngay 3 tháng YouTube Premium miễn phí",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645325558/mdrlhbd5gzx1g87wzx90.jpg",
+      "desc": "<p>Xiaomi mới đây đã tung ra chương trình ưu đãi tặng 3 tháng trải nghiệm miễn phí YouTube Premium cho khách hàng mua điện thoại mới. Ưu đãi này không dành cho tất cả các mẫu smartphone của hãng. Chỉ có một số mẫu smartphone nhất định mới có thể nhận được ưu đãi này. Chương trình này là một phần trong thoả thuận hợp tác mới mà Xiaomi ký kết với YouTube trước đó không lâu.</p><p class='mt-[10px]'>Ngay sau khi ưu đãi này được, nó đã nhanh chóng thu hút được sự quan tâm của người dùng, đặc biệt là với những người đang có ý định nâng cấp lên YouTube Premium. Thời gian 3 tháng thử nghiệm tuy không phải là thời gian quá dài nhưng cũng sẽ đủ để người dùng có thể trải nghiệm được hết những tính năng đặc sắc trên YouTube Premium. Về phần YouTube, họ mong rằng thông qua chương trình này, một số người có thể tìm thấy điều mà họ cần trong đối với gói Premium và tiếp tục đăng ký dịch vụ này. Có thể liệt kê một số lợi ích tuyệt vời mà YouTube Premium đem lại như sau:</p> <ul class=\"mt-[10px]\"><li>Không có quảng cáo trong video</li><li>Toàn quyền truy cập vào YouTube Originals</li><li>Sử dụng YouTube Music Premium</li><li>Có thể tải video, và phát video trong nền</li></ul> <p class='mt-[10px]'>Bình luận về chương trình ưu đãi thú vị này, Hanson Han, Giám đốc Phát triển Kinh doanh của Xiaomi International phát biểu: “Người dùng đang ngày càng dành nhiều thời gian giải trí bằng video trực tuyến và Xiaomi tin rằng điều quan trọng là phải để khách hàng của mình có cơ hội trải nghiệm nội dung chất lượng theo những cách mới. Xiaomi rất vui khi hợp tác với YouTube để mang đến khách hàng của mình trải nghiệm xem nội dung yêu thích mà không bị gián đoạn. Chúng tôi hy vọng đây sẽ là sự khởi đầu cho mối quan hệ lâu dài giữa Xiaomi và YouTube, cùng nhau đem lại lợi ích tốt nhất cho người dùng”</p> <p class='mt-[10px]'>Tuy nhiên, người dùng cần lưu ý chương trình ưu đãi này sẽ chỉ được áp dụng cho một số sản phẩm cụ thể thuộc danh sách sau:</p> <ul class=\"mt-[10px]\"><li>Xiaomi 11T Pro</li><li>Xiaomi 11T</li><li>Xiaomi 11 Lite 5G NE</li><li>Redmi Note 11 Pro 5G</li><li>Redmi Note 11 Pro</li><li>Redmi Note 11S</li><li>Redmi Note 11</li></ul><p class=\"mt-[10px]\">Để có thể hưởng chương trình ưu đãi này, trước hết bạn cần mua một chiếc điện thoại thuộc danh sách trên. Sau khi đã có sản phẩm, bạn tiến hành mở ứng dụng YouTube và làm theo hướng dẫn <a href=\"https://support.google.com/youtube/answer/6305537\" class=\"text-yellow-500 font-bold\">tại đây</a> để đăng ký. Thời gian nhận ưu đãi này sẽ kết thúc vào ngày 28 tháng 2, nhưng cũng có thể được gia hạn tùy theo tình hình thực tế từng quốc gia/khu vực.</p><p class=\"mt-[10px]\">Theo <b>Neowin</b></p>",
+      "short_desc": "Xiaomi mới đây đã tung ra chương trình ưu đãi tặng 3 tháng trải nghiệm miễn phí YouTube Premium cho khách hàng mua ...",
+      "id": 3
     }
   ],
   "banners": []

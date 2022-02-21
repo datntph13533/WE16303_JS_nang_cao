@@ -60,7 +60,8 @@ const EditUserPage = {
                                             <label class="block text-sm font-medium text-gray-700">
                                             Hình ảnh <span class="text-[red]">*</span>
                                             </label>
-                                            <img src="${data.img}" class="w-[240px] h-[140px]"/>
+                                            <img src="${data.img}" id="img-preview" class="w-[240px] h-[140px]"/>
+                                            <input type="hidden" name="oldImage" value="${data.img}">
                                             <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
                                                 <div class="space-y-1 text-center">
                                                     <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48"
@@ -100,19 +101,30 @@ const EditUserPage = {
         const formEdit = $("#formEdit");
         const CLOUDINARY_PRESET_KEY = "js8yqruv";
         const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dvj4wwihv/image/upload";
+        const imgPreview = $("#img-preview");
+        const imgPost = $("#file-upload");
 
+        let imgLink = "";
+        imgPost.addEventListener("change", (e) => {
+            imgPreview.src = URL.createObjectURL(e.target.files[0]);
+        });
         formEdit.addEventListener("submit", async (e) => {
             e.preventDefault();
             try {
                 const file = $("#file-upload").files[0];
-                const formData = new FormData();
-                formData.append("file", file);
-                formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
-                const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
-                    headers: {
-                        "Content-Type": "application/form-data",
-                    },
-                });
+                if (file) {
+                    const formData = new FormData();
+                    formData.append("file", file);
+                    formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
+                    const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+                        headers: {
+                            "Content-Type": "application/form-data",
+                        },
+                    });
+                    imgLink = data.url;
+                } else {
+                    imgLink = formEdit.oldImage.value;
+                }
                 edit({
                     id,
                     name: $("#name-user").value,
@@ -121,14 +133,12 @@ const EditUserPage = {
                     phone: $("#phone").value,
                     address: $("#address").value,
                     roleId: $("#roleId").value,
-                    img: data.url,
+                    img: imgLink,
                 });
-                if ({ data }) {
-                    toastr.success("Cập nhật tài khoản thành công, chuyển trang sau 2s");
-                    setTimeout(() => {
-                        document.location.href = "/admin/user";
-                    }, 2000);
-                }
+                toastr.success("Cập nhật tài khoản thành công, chuyển trang sau 2s");
+                setTimeout(() => {
+                    document.location.href = "/admin/user";
+                }, 2000);
             } catch (error) {
                 toastr.error(error.response.data);
             }

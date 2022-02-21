@@ -59,6 +59,7 @@ const AddUsersPage = {
                                             <label class="block text-sm font-medium text-gray-700">
                                             Hình ảnh <span class="text-[red]">*</span>
                                             </label>
+                                            <img src="" id="img-preview" class="w-[240px] h-[140px]"/>
                                             <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
                                                 <div class="space-y-1 text-center">
                                                     <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48"
@@ -98,19 +99,28 @@ const AddUsersPage = {
         const formAdd = $("#formAdd");
         const CLOUDINARY_PRESET_KEY = "js8yqruv";
         const CLOUDINARY_API_URL = "https://api.cloudinary.com/v1_1/dvj4wwihv/image/upload";
+        const imgPreview = $("#img-preview");
+        const imgPost = $("#file-upload");
 
+        let imgLink = "";
+        imgPost.addEventListener("change", (e) => {
+            imgPreview.src = URL.createObjectURL(e.target.files[0]);
+        });
         formAdd.addEventListener("submit", async (e) => {
             e.preventDefault();
             try {
                 const file = $("#file-upload").files[0];
-                const formData = new FormData();
-                formData.append("file", file);
-                formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
-                const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
-                    headers: {
-                        "Content-Type": "application/form-data",
-                    },
-                });
+                if (file) {
+                    const formData = new FormData();
+                    formData.append("file", file);
+                    formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
+                    const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+                        headers: {
+                            "Content-Type": "application/form-data",
+                        },
+                    });
+                    imgLink = data.url;
+                }
                 add({
                     name: $("#name-user").value,
                     email: $("#email").value,
@@ -118,14 +128,12 @@ const AddUsersPage = {
                     phone: $("#phone").value,
                     address: $("#address").value,
                     roleId: $("#roleId").value,
-                    img: data.url,
+                    img: imgLink || imgPreview.src,
                 });
-                if ({ data }) {
-                    toastr.success("Thêm mới tài khoản thành công, chuyển trang sau 2s");
-                    setTimeout(() => {
-                        document.location.href = "/admin/user";
-                    }, 2000);
-                }
+                toastr.success("Thêm mới tài khoản thành công, chuyển trang sau 2s");
+                setTimeout(() => {
+                    document.location.href = "/admin/user";
+                }, 2000);
             } catch (error) {
                 toastr.error(error.response.data);
                 $("#formAdd").reset();

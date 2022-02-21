@@ -29,7 +29,7 @@ const Nav = {
                         </div>
                         <div class="grid grid-cols-1 mx-auto">
                         ${localStorage.getItem("user") ? `<ul class="flex">
-                            <li class="flex items-center">Xin chao <span class="block py-3 px-4" id="email"></span></li>
+                            <li class="flex items-center">Xin chao <span class="block py-3 px-4" id="email">hh</span></li>
                             <li><a class="block py-3 px-4" id="logout">logout</a></li>
                         </ul>` : `<ul class="flex">
                                 <li class="mx-4"><a href="/signup">Đăng ký</a></li>
@@ -71,11 +71,11 @@ const Nav = {
                     <div class="flex justify-center">
                         <nav class="">
                             <ul class="flex h-[50px] oy-2">
-                                <li><a href="" class="menu-item">Trang chủ</a></li>
+                                <li><a href="/" class="menu-item">Trang chủ</a></li>
                                 ${response.data.map((post) => /* html */ `
-                                <li><a href="" class="menu-item">${post.title}</a></li>
+                                <li><a href="/categoryProducts/${post.id}?_embed=products" class="menu-item">${post.title}</a></li>
                                 `).join("")}
-                                <li><a href="" class="menu-item">Tin tức công nghệ</a></li>
+                                <li><a href="/blog" class="menu-item">Tin tức công nghệ</a></li>
                                 <li><a href="" class="menu-item">Liên hệ</a></li>
                             </ul>
                         </nav>
