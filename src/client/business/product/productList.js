@@ -36,7 +36,7 @@ const ProductList = {
                                 <img src="${product.img}" alt="" class="w-[250px] h-[300px]"/>
                             </a>
                             <h3 class="my-3"><a href="/products/${product.id}" class="font-semibold text-lg text-orange-500 ">${product.name}</a></h3>
-                            <p>${product.price}</p>
+                            <p>${product.price.toLocaleString("vi", { style: "currency", currency: "VND" })}</p>
                         </div>
                         `).join("")}
                     </div>

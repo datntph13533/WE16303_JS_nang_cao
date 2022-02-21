@@ -69,7 +69,11 @@ router.on({
         const { id } = data;
         print(ProductDetail, id);
     },
+    "/cart": () => {
+        print(Blog);
+    },
     //-------------------------------
+
     // phần admin
     "/admin": () => {
         print(AdminDashboard);

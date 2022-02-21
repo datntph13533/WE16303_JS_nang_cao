@@ -1,6 +1,7 @@
-// import toastr from "toastr";
+import toastr from "toastr";
 import "toastr/build/toastr.min.css";
 import { get, getAll } from "../../../Api/products";
+import { addToCart } from "../../../utils/cart";
 import Footer from "../../views/footer";
 import Header from "../../views/header";
 
@@ -8,7 +9,6 @@ const ProductDetail = {
     async render(id) {
         const { data } = await get(id);
         const data2 = await getAll();
-        // const data2 = await getAll();
         return /* html */`
         ${await Header.render()}
         <main class="my-[20px]">
@@ -53,11 +53,11 @@ const ProductDetail = {
                                     Số lượng:
                                 </div>
                                 <div class="mx-3 border h-[40px] w-[120px] flex justify-around">
-                                    <input type="number" id="inputQuantity" value="1" class="w-10 text-center mx-2">
+                                    <input type="number" value="1" id="inputValue" class="w-10 text-center mx-2">
                                 </div>
                             </div>
                             <div class="mt-8">
-                                <button id="btnAddToCart" class="bg-orange-400 h-10 w-44 rounded-sm text-white">Thêm vào giỏ hàng</button>
+                                <button data-id="${data.id}" id="btnAddToCart" class="bg-orange-400 h-10 w-44 rounded-sm text-white">Thêm vào giỏ hàng</button>
                             </div>
                         </div>
                     </div>
@@ -99,19 +99,21 @@ const ProductDetail = {
         ${Footer.render()}
         `;
     },
-    // afterRender(id) {
-    //     const btnAddToCart = document.querySelector("#btnAddToCart");
-    //     const inputQuantity = document.querySelector("#inputQuantity");
-    //     btnAddToCart.addEventListener("click", async () => {
-    //         if (!localStorage.getItem("user")) {
-    //             alert("Bạn cần đăng nhập để mua hàng !");
-    //         } else {
-    //             const { data } = await get(id);
-    //             addToCart({ ...data, quantity: +inputQuantity.value }, () => {
+    afterRender() {
+        const btnAddToCart = document.querySelector("#btnAddToCart");
+        const { id } = btnAddToCart.dataset;
 
-    //             });
-    //         }
-    //     });
-    // },
+        btnAddToCart.addEventListener("click", async () => {
+            if (!localStorage.getItem("user")) {
+                toastr.error("Bạn cần đăng nhập để mua hàng !");
+            } else {
+                const inputValue = document.querySelector("#inputValue").value;
+                const { data } = await get(id);
+                addToCart({ ...data, quantity: inputValue || 1 }, () => {
+                    toastr.success(`Thêm sản phẩm ${data.name} vào giỏ hàng thành công!`);
+                });
+            }
+        });
+    },
 };
 export default ProductDetail;

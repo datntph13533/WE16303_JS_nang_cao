@@ -45,11 +45,11 @@ const AddProductPage = {
                                         </div>
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Giá <span class="text-[red]">*</span></label>
-                                            <input type="text" id="price-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
+                                            <input type="number" id="price-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
                                         </div>
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Số lượng <span class="text-[red]">*</span></label>
-                                            <input type="text" id="quantity-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
+                                            <input type="number" id="quantity-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700">Mô tả nhỏ <span class="text-[red]">*</span></label>

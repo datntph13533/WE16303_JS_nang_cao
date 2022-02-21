@@ -58,7 +58,7 @@ const Nav = {
                             </form>
                         </div>
                         <div class="my-auto mx-auto">
-                            <a href="" class="flex">
+                            <a href="/" class="flex">
                                 <i class="fas fa-shopping-cart text-[35px] mr-[10px]"></i>
                                 <p class="text-[20px]">Cart</p>
                             </a>
@@ -76,7 +76,7 @@ const Nav = {
                                 <li><a href="/categoryProducts/${post.id}?_embed=products" class="menu-item">${post.title}</a></li>
                                 `).join("")}
                                 <li><a href="/blog" class="menu-item">Tin tức công nghệ</a></li>
-                                <li><a href="" class="menu-item">Liên hệ</a></li>
+                                <li><a href="/" class="menu-item">Liên hệ</a></li>
                             </ul>
                         </nav>
                     </div>
