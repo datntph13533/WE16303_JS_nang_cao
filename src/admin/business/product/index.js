@@ -76,12 +76,12 @@ const AdminListProduct = {
                                                 </td>
                                                 <td class="px-6 py-4 whitespace">
                                                     <div class="flex items-center">
-                                                        ${post.price} VNĐ
+                                                        ${post.price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })}
                                                     </div>
                                                 </td>
                                                 <td class="px-6 py-4 whitespace">
                                                     <div class="flex items-center">
-                                                        ${post.quantity}
+                                                        ${post.quantity.toLocaleString("it-IT")}
                                                     </div>
                                                 </td>
                                                 <td class="px-6 py-4 whitespace">

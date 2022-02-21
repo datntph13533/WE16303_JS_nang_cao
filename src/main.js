@@ -15,6 +15,7 @@ import AdminDashboard from "./admin/views";
 import Blog from "./client/business/blog";
 import detailBlog from "./client/business/detailBlog";
 import HomePage from "./client/business/home";
+import cartPage from "./client/business/product/cart";
 import ProductDetail from "./client/business/product/productDetail";
 import ProductList from "./client/business/product/productList";
 import Signin from "./client/business/signin";
@@ -70,7 +71,7 @@ router.on({
         print(ProductDetail, id);
     },
     "/cart": () => {
-        print(Blog);
+        print(cartPage);
     },
     //-------------------------------
 

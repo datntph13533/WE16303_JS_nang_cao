@@ -129,11 +129,11 @@ const AddProductPage = {
                     imgLink = data.url;
                 }
                 add({
-                    categoryProductId: $("#cateId").value,
+                    categoryProductId: Number($("#cateId").value),
                     name: $("#name-product").value,
                     img: imgLink || imgPreview.src,
-                    price: $("#price-product").value,
-                    quantity: $("#quantity-product").value,
+                    price: Number($("#price-product").value),
+                    quantity: Number($("#quantity-product").value),
                     short_desc: $("#short_desc-product").value,
                     desc: $("#desc-product").value,
                 });

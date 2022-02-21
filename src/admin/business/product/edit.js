@@ -134,11 +134,11 @@ const EditProductPage = {
                 }
                 edit({
                     id,
-                    categoryProductId: $("#cateProductId").value,
+                    categoryProductId: Number($("#cateProductId").value),
                     name: $("#name-product").value,
                     img: imgLink,
-                    price: $("#price-product").value,
-                    quantity: $("#quantity-product").value,
+                    price: Number($("#price-product").value),
+                    quantity: Number($("#quantity-product").value),
                     short_desc: $("#short_desc-product").value,
                     desc: $("#desc-product").value,
                 });

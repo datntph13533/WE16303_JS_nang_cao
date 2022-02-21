@@ -46,14 +46,14 @@ const ProductDetail = {
                                 <div class="font-medium text-[16px] break-words">${data.short_desc}</div>
                             </div>
                             <div class="text-[#fe4c50] font-semibold text-2xl mb-5">
-                                ${data.price} đ
+                                ${data.price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })}
                             </div>
                             <div class="flex">
                                 <div class="text-[#1e1e27] mt-1">
                                     Số lượng:
                                 </div>
                                 <div class="mx-3 border h-[40px] w-[120px] flex justify-around">
-                                    <input type="number" value="1" id="inputValue" class="w-10 text-center mx-2">
+                                    <input type="number" id="inputValue" value="1" class="w-10 text-center mx-2">
                                 </div>
                             </div>
                             <div class="mt-8">
@@ -85,7 +85,7 @@ const ProductDetail = {
                         <img src="${item.img}" alt="" class="w-[250px] h-[300px]"/>
                     </a>
                     <h3 class="my-3"><a href="/products/${item.id}" class="font-semibold text-lg text-orange-500 ">${item.name}</a></h3>
-                    <p>${item.price}</p>
+                    <p>${item.price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })}</p>
                 </div>
                 `;
         }
@@ -101,15 +101,15 @@ const ProductDetail = {
     },
     afterRender() {
         const btnAddToCart = document.querySelector("#btnAddToCart");
-        const { id } = btnAddToCart.dataset;
+        const a = btnAddToCart.dataset.id;
 
         btnAddToCart.addEventListener("click", async () => {
             if (!localStorage.getItem("user")) {
                 toastr.error("Bạn cần đăng nhập để mua hàng !");
             } else {
                 const inputValue = document.querySelector("#inputValue").value;
-                const { data } = await get(id);
-                addToCart({ ...data, quantity: inputValue || 1 }, () => {
+                const { data } = await get(a);
+                addToCart({ ...data, quantity: Number(inputValue) }, () => {
                     toastr.success(`Thêm sản phẩm ${data.name} vào giỏ hàng thành công!`);
                 });
             }

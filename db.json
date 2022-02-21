@@ -1,80 +1,40 @@
 {
   "products": [
     {
-      "id": 3,
-      "categoryProductId": "3",
-      "name": "hhhhhhhhhhhhhhhhh",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645417592/ayfppilnemzjn3qdmlq5.webp",
-      "price": "10000",
-      "quantity": "1000000",
+      "categoryProductId": 1,
+      "name": "ggggggggggggggggggggg",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645449856/fdqcljo6uxh2ypwmrfce.jpg",
+      "price": 10000000,
+      "quantity": 10000,
       "short_desc": "gggggggggggggg",
-      "desc": "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
-    },
-    {
-      "categoryProductId": "1",
-      "name": "ggggggggggggggggggggg",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645419775/fylryrsth0a5j9amaqak.jpg",
-      "price": "10000000",
-      "quantity": "10000",
-      "short_desc": "dddddddddddddđ",
-      "desc": "dddddddddddddddd",
-      "id": 4
-    },
-    {
-      "categoryProductId": "1",
-      "name": "ggggggggggggggggggggg",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645419792/awsrkstmvysj2iwuzc8x.jpg",
-      "price": "10000000",
-      "quantity": "10000",
-      "short_desc": "ddddddddddddddd",
-      "desc": "dddddddddd",
-      "id": 5
-    },
-    {
-      "categoryProductId": "1",
-      "name": "ggggggggggggggggggggg",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645419841/fzmpxpvyvnxiannxkrot.jpg",
-      "price": "10000000",
-      "quantity": "100000",
-      "short_desc": "hhhhhhhhhhhhhhhhhh",
-      "desc": "hhhhhhhhhhhhhhhhhhhhhhhhh",
-      "id": 6
-    },
-    {
-      "categoryProductId": "1",
-      "name": "ggggggggggggggggggggg",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645435774/nwb0vutmtrhi4ma6wji8.jpg",
-      "price": "10000000",
-      "quantity": "10000",
-      "short_desc": "gggggggggggggg",
-      "desc": "ggggggggggggggggg",
-      "id": 7
+      "desc": "ggggggggggggggg",
+      "id": 9
     }
   ],
   "categoryProducts": [
     {
       "title": "Điện thoại",
-      "id": "1"
+      "id": 1
     },
     {
       "title": "Tablet",
-      "id": "2"
+      "id": 2
     },
     {
       "title": "Laptop, PC, Màn hình",
-      "id": "3"
+      "id": 3
     },
     {
       "title": "Đồng hồ",
-      "id": "4"
+      "id": 4
     },
     {
       "title": "Âm thanh",
-      "id": "5"
+      "id": 5
     },
     {
       "title": "Phụ kiện",
-      "id": "6"
+      "id": 6
     }
   ],
   "users": [
