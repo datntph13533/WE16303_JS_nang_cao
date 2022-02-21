@@ -58,7 +58,7 @@ const Nav = {
                             </form>
                         </div>
                         <div class="my-auto mx-auto">
-                            <a href="/" class="flex">
+                            <a href="/cart" class="flex">
                                 <i class="fas fa-shopping-cart text-[35px] mr-[10px]"></i>
                                 <p class="text-[20px]">Cart</p>
                             </a>
