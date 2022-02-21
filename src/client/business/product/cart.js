@@ -49,9 +49,6 @@ const cartPage = {
                                                 Giá sản phẩm
                                             </th>
                                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                                Status
-                                            </th>
-                                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                                 Tổng giá
                                             </th>
                                         </tr>
@@ -75,27 +72,23 @@ const cartPage = {
                                                 <td class="px-6 py-4">
                                                     <div class="text-sm text-gray-900"> ${post.name} </div>
                                                 </td>
-                                                <td class="px-6 py-4">
-                                                    <div class="text-sm text-gray-900"> ${post.quantity} </div>
-                                                </td>
-                                                <td class="px-6 py-4">
-                                                    <div class="text-sm text-gray-900"> ${post.price} </div>
-                                                </td>
-                                                <td class="px-6 py-4">
-                                                    <span class="px-6 py-4 text-right text-sm font-medium">
+                                                <td class="px-6 py-4 flex">
+                                                    <span class="px-6 py-12 text-right text-sm font-medium flex">
                                                         <button data-id="${post.id}" class="btn bg-red-500 text-white inline-block py-3 px-5 rounded btn-decrease">-</button>
-                                                    </span>
-                                                    <span class="px-6 py-4 text-right text-sm font-medium">
+                                                        <div class="px-4 py-4 text-sm text-gray-900 border"> ${post.quantity} </div>
                                                         <button data-id="${post.id}" class="btn bg-red-500 text-white inline-block py-3 px-5 rounded btn-increase"><a href="">+</a></button>
                                                     </span>
                                                 </td>
                                                 <td class="px-6 py-4">
-                                                    <div class="text-sm text-gray-900">${post.price * post.quantity} </div>
+                                                    <div class="text-sm text-gray-900"> ${post.price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })} </div>
+                                                </td>
+                                                <td class="px-6 py-4">
+                                                    <div class="text-sm text-gray-900">${(post.price * post.quantity).toLocaleString("vi-VN", { style: "currency", currency: "VND" })} </div>
                                                 </td>
                                             </tr>
                                         `).join("")}
                                         <tr class="grid-cols-6">
-                                            <td colspan="5" class="px-6 py-4">
+                                            <td colspan="4" class="px-6 py-4">
                                                 <div class="text-center uppercase">
                                                     thành tiền:
                                                 </div>

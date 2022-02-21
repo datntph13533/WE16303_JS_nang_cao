@@ -3,8 +3,9 @@ import toastr from "toastr";
 import { add } from "../../../Api/products";
 import NavAdmin from "../../views/nav";
 import "toastr/build/toastr.min.css";
-import { $ } from "../../../utils/selector";
 import { getAll } from "../../../Api/cates";
+import $ from "jquery";
+import jqueryValidate from "jquery-validation";
 
 const AddProductPage = {
     async render() {
@@ -41,26 +42,26 @@ const AddProductPage = {
                                     
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Tên sản phẩm <span class="text-[red]">*</span></label>
-                                            <input type="text" id="name-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
+                                            <input type="text" id="name-product" name="name-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
                                         </div>
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Giá <span class="text-[red]">*</span></label>
-                                            <input type="number" id="price-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
+                                            <input type="number" id="price-product" name="price-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
                                         </div>
                                         <div class="col-span-6">
                                             <label class="block text-sm font-medium text-gray-700">Số lượng <span class="text-[red]">*</span></label>
-                                            <input type="number" id="quantity-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
+                                            <input type="number" id="quantity-product" name="quantity-product" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm h-[30px] border border-gray-300 rounded-md">
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700">Mô tả nhỏ <span class="text-[red]">*</span></label>
                                             <div class="mt-1">
-                                                <textarea  rows="5" id="short_desc-product" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                                <textarea  rows="5" id="short_desc-product" name="short_desc-product" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
                                             </div>
                                         </div>
                                         <div>
                                             <label class="block text-sm font-medium text-gray-700">Mô tả <span class="text-[red]">*</span></label>
                                             <div class="mt-1">
-                                                <textarea  rows="5" id="desc-product" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                                <textarea  rows="5" id="desc-product" name="desc-product" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
                                             </div>
                                         </div>
                                         <div>
@@ -109,42 +110,96 @@ const AddProductPage = {
         const imgPreview = $("#img-preview");
         const imgPost = $("#file-upload");
 
-        let imgLink = "";
-        imgPost.addEventListener("change", (e) => {
-            imgPreview.src = URL.createObjectURL(e.target.files[0]);
-        });
-        formAdd.addEventListener("submit", async (e) => {
-            e.preventDefault();
-            try {
-                const file = $("#file-upload").files[0];
-                if (file) {
-                    const formData = new FormData();
-                    formData.append("file", file);
-                    formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
-                    const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
-                        headers: {
-                            "Content-Type": "application/form-data",
-                        },
+        formAdd.validate({
+            rules: {
+                "name-product": {
+                    required: true,
+                    minlength: 5,
+                },
+                "price-product": {
+                    required: true,
+                    minlength: 5,
+                },
+                "quantity-product": {
+                    required: true,
+                    minlength: 5,
+                },
+                "short_desc-product": {
+                    required: true,
+                    minlength: 5,
+                },
+                "desc-product": {
+                    required: true,
+                    minlength: 5,
+                },
+                "file-upload": {
+                    required: true,
+                },
+            },
+            messages: {
+                "name-product": {
+                    required: "Không để trống trường này!",
+                    minlength: "Ít nhất phải trên 5 ký tự",
+                },
+                "price-product": {
+                    required: "Không để trống trường này!",
+                    minlength: "Ít nhất phải trên 5 ký tự",
+                },
+                "quantity-product": {
+                    required: "Không để trống trường này!",
+                    minlength: "Ít nhất phải trên 5 ký tự",
+                },
+                "short_desc-product": {
+                    required: "Không để trống trường này!",
+                    minlength: "Ít nhất phải trên 5 ký tự",
+                },
+                "desc-product": {
+                    required: "Không để trống trường này!",
+                    minlength: "Ít nhất phải trên 5 ký tự",
+                },
+                "file-upload": {
+                    required: "Không để trống trường này!",
+                },
+            },
+            submitHandler: () => {
+                async function handleAddPost() {
+                    let imgLink = "";
+                    imgPost.addEventListener("change", (e) => {
+                        imgPreview.src = URL.createObjectURL(e.target.files[0]);
                     });
-                    imgLink = data.url;
+                    try {
+                        const file = $("#file-upload").files[0];
+                        if (file) {
+                            const formData = new FormData();
+                            formData.append("file", file);
+                            formData.append("upload_preset", CLOUDINARY_PRESET_KEY);
+                            const { data } = await axios.post(CLOUDINARY_API_URL, formData, {
+                                headers: {
+                                    "Content-Type": "application/form-data",
+                                },
+                            });
+                            imgLink = data.url;
+                        }
+                        add({
+                            categoryProductId: Number($("#cateId").value),
+                            name: $("#name-product").value,
+                            img: imgLink || imgPreview.src,
+                            price: Number($("#price-product").value),
+                            quantity: Number($("#quantity-product").value),
+                            short_desc: $("#short_desc-product").value,
+                            desc: $("#desc-product").value,
+                        });
+                        toastr.success("Thêm mới sản phẩm thành công, chuyển trang sau 2s");
+                        setTimeout(() => {
+                            document.location.href = "/admin/product";
+                        }, 2000);
+                    } catch (error) {
+                        toastr.error(error.response.data);
+                        $("#formAdd").reset();
+                    }
                 }
-                add({
-                    categoryProductId: Number($("#cateId").value),
-                    name: $("#name-product").value,
-                    img: imgLink || imgPreview.src,
-                    price: Number($("#price-product").value),
-                    quantity: Number($("#quantity-product").value),
-                    short_desc: $("#short_desc-product").value,
-                    desc: $("#desc-product").value,
-                });
-                toastr.success("Thêm mới sản phẩm thành công, chuyển trang sau 2s");
-                setTimeout(() => {
-                    document.location.href = "/admin/product";
-                }, 2000);
-            } catch (error) {
-                toastr.error(error.response.data);
-                $("#formAdd").reset();
-            }
+                handleAddPost();
+            },
         });
     },
 };
