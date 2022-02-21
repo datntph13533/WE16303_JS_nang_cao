@@ -9,6 +9,46 @@
       "short_desc": "gggggggggggggg",
       "desc": "ggggggggggggggg",
       "id": 9
+    },
+    {
+      "categoryProductId": 1,
+      "name": "iPhone 13 Pro Max 256GB I Chính hãng VN/A",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645461873/jcq4pfb38tbcorbheuok.webp",
+      "price": 33190000,
+      "quantity": 10000,
+      "short_desc": "<p>Nguyên hộp, đầy đủ phụ kiện từ nhà sản xuất</p><p class=\"mt-[10px]\">Bảo hành 12 tháng tại trung tâm bảo hành chính hãng Apple Việt Nam. 1 ĐỔI 1 trong 30 ngày nếu có lỗi phần cứng nhà sản xuất.&nbsp;<a href=\"https://cellphones.com.vn/chinh-sach-bao-hanh\" style=\"color: red\">(xem chi tiết)</a></p>",
+      "desc": "<p><strong><a href=\"https://cellphones.com.vn/iphone-13-pro-max.html\" title=\"iPhone 13 Pro Max chính hãng\" target=\"_blank\">iPhone 13 Pro Max</a> 256GB</strong> được đánh giá là một trong những dòng iPhone có khả năng chụp ảnh siêu ấn tượng cùng với camera góc siêu rộng mang đến khả năng chụp ảnh thiếu sáng một cách đặc biệt. Không những thế, mà dòng iPhone này còn được đánh giá là có dung lượng bộ nhớ tốt, đáp ứng được đầy đủ các công việc hằng ngày<br>Xem thêm thông tin <a href=\"https://cellphones.com.vn/iphone-13-pro-max-512gb.html\" target=\"_blank\">iPhone 13 Pro Max 512GB</a> thiết kế đẳng cấp, mang lại trải nghiệm vượt trội cho người dùng</p>",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "categoryProductId": 1,
+      "name": "Samsung Galaxy Note 20 Ultra 5G",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645462213/mrsd1su07n4f9z5jzcbb.webp",
+      "price": 20500000,
+      "quantity": 10000,
+      "short_desc": "<p>Mới, đầy đủ phụ kiện từ nhà sản xuất</p><p class=\"10px\">Bút cảm ứng, Cây lấy sim, Tai nghe dây đầu Type C, Cáp Type C - Type C, Củ sạc nhanh rời đầu Type C, Sách hướng dẫn</p><p class=\"mt-[10px]\">Bảo hành chính hãng 12 tháng tại trung tâm bảo hành ủy quyền, 1 đổi 1 trong 30 ngày nếu có lỗi phần cứng từ NSX.  <a href=\"https://cellphones.com.vn/chinh-sach-bao-hanh\" style=\"color: red\">(xem chi tiết)</a></p>",
+      "desc": "<h2 style=\"text-align: justify;\"><strong>Điện thoại Samsung Note 20 Ultra 5G - Sang trọng, hiệu năng vượt trội</strong></h2><p style=\"text-align: justify;\">Bên cạnh biên bản Galaxy Note 20 thường, Samsung còn cho ra mắt <strong>Note 20 Ultra 5G</strong> cho khả năng kết nối dữ liệu cao cùng thiết kế nguyên khối sang trọng, bắt mắt. Đây sẽ là sự lựa chọn hoàn hảo dành cho bạn để sử dụng mà không bị lỗi thời sau thời gian dài ra mắt.</p><p style=\"text-align: justify;\">Ngoài ra, bạn có thể tham khảo <a href=\"https://cellphones.com.vn/samsung-galaxy-z-fold-3.html\">Galaxy Z Fold 3 5G</a> nếu bạn cần sự khác biệt và khẳng định đẳng cấp.</p>"
+    },
+    {
+      "categoryProductId": 3,
+      "name": "Apple MacBook Air M1 256GB 2020 I Chính hãng Apple Việt Nam",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645462816/tv3ibwcdsdgun6utno6e.webp",
+      "price": 24590000,
+      "quantity": 10000,
+      "short_desc": "<p class=\"mt-[10px]\">Máy mới 100%, đầy đủ phụ kiện từ nhà sản xuất. Sản phẩm có mã SA/A (được Apple Việt Nam phân phối chính thức).</p><p class=\"mt-[10px]\">Máy, Sách HDSD, Cáp sạc USB-C (2 m), Cốc sạc USB-C 30W</p><p class=\"mt-[10px]\">Bảo hành 12 tháng tại trung tâm bảo hành chính hãng Apple Việt Nam. 1 ĐỔI 1 trong 30 ngày nếu có lỗi phần cứng nhà sản xuất. (xem chi tiết)</p>",
+      "desc": "Macbook Air M1 2020 - Sang trọng, tinh tế, hiệu năng khủng\nLà dòng sản phẩm có thiết kế mỏng nhẹ, sang trọng và tinh tế cùng với đó là giá thành phải chăng nên MacBook Air đã thu hút được đông đảo người dùng yêu thích và lựa chọn. Một trong những phiên bản mới nhất mà khách hàng không thể bỏ qua khi đến với CellphoneS đó là MacBook Air M1. Dưới đây là chi tiết về thiết kế, cấu hình của máy.\n\nThiết kế tinh tế, chất liệu nhôm bền bỉ\nMacBook Air 2020 M1 mới vẫn luôn tuân thủ triết lý thiết kế với những đường nét đơn nhưng vô cùng sang trọng. Máy có độ mỏng nhẹ chỉ 1,29kg và các cạnh tràn viền khiến thiết bị trở nên đẹp hơn và cao cấp hơn.",
+      "id": 12
+    },
+    {
+      "categoryProductId": 3,
+      "name": "Laptop Asus Gaming Rog Strix G15 G513IH HN015W",
+      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645463392/zudmtgdhazdmk1hawah7.webp",
+      "price": 21990000,
+      "quantity": 10000,
+      "short_desc": "Bảo hành 24 tháng tại trung tâm bảo hành Chính hãng. 1 đổi 1 trong 30 ngày nếu có lỗi phần cứng từ nhà sản xuất. (xem chi tiết)",
+      "desc": "Laptop Asus gaming Rog Strix G15 G513IH-HN015W - Cấu hình mạnh mẽ chiến game\nAsus ROG Strix G15 G513IH-HN015TW là chiếc laptop có cấu hình mạnh mẽ, đáp ứng được hầu hết các tựa game trên thị trường hiện nay. Ngay cả khi hoạt động trong nhiều giờ liền máy vẫn khá mát mẻ do có hệ thống tản nhiệt cao cấp. Nếu bạn là một game thủ hay người dùng muốn tìm máy có cấu hình cao thì đừng bỏ qua chiếc laptop Asus chất lượng này.\n\nThiết kế mạnh mẽ\nAsus ROG Strix G15 G513IH-HN015TW có ngoại hình vô cùng mạnh mẽ với màu sắc trang nhã. Khung máy có kích thước nhỏ hơn đến 7% so với thế hệ trước giúp bạn có thể chơi bất cứ tựa game nào mà bạn muốn. ",
+      "id": 13
     }
   ],
   "categoryProducts": [

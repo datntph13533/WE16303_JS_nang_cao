@@ -82,10 +82,10 @@ const ProductDetail = {
             return `
                 <div class="border p-3">
                     <a href="/products/${item.id}">
-                        <img src="${item.img}" alt="" class="w-[250px] h-[300px]"/>
+                        <img src="${item.img}" alt="" class="w-[250px] h-[250px]"/>
                     </a>
-                    <h3 class="my-3"><a href="/products/${item.id}" class="font-semibold text-lg text-orange-500 ">${item.name}</a></h3>
-                    <p>${item.price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })}</p>
+                    <h3 class="my-3"><a href="/products/${item.id}" class="font-semibold text-lg ">${item.name}</a></h3>
+                    <p class="text-[red] font-semibold text-[16px]">${item.price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })}</p>
                 </div>
                 `;
         }

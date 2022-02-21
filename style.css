@@ -15,15 +15,15 @@
     img{
         @apply align-middle
     }
-    .container {
+    /* .container {
         @apply relative
-    }
+    } */
 
-    .mySlides {
+    /* .mySlides {
         @apply hidden
-    }
+    } */
     .image{
-        @apply w-[1440px] h-[420px]
+        @apply w-[1440px] h-[520px]
     }
 
     .cursor {

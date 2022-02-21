@@ -33,10 +33,10 @@ const ProductList = {
                     ${data.slice(0, 20).map((product) => /* html */ `
                         <div class="border p-3">
                             <a href="/products/${product.id}">
-                                <img src="${product.img}" alt="" class="w-[250px] h-[300px]"/>
+                                <img src="${product.img}" alt="" class="w-[250px] h-[250px]"/>
                             </a>
-                            <h3 class="my-3"><a href="/products/${product.id}" class="font-semibold text-lg text-orange-500 ">${product.name}</a></h3>
-                            <p>${product.price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })}</p>
+                            <h3 class="my-3"><a href="/products/${product.id}" class="font-semibold text-lg">${product.name}</a></h3>
+                            <p class="text-[red] font-semibold text-[16px]">${product.price.toLocaleString("vi-VN", { style: "currency", currency: "VND" })}</p>
                         </div>
                         `).join("")}
                     </div>
