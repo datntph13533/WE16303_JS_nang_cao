@@ -3,6 +3,10 @@ import { reRender } from "../../utils/rerender";
 
 const Nav = {
     async render() {
+        let cart = [];
+        if (localStorage.getItem("cart")) {
+            cart = JSON.parse(localStorage.getItem("cart"));
+        }
         const response = await getAll();
         return /* html */ `
             <div class="bg-white h-[50px] mb-[10px]">
@@ -59,8 +63,9 @@ const Nav = {
                         </div>
                         <div class="my-auto mx-auto">
                             <a href="/cart" class="flex">
-                                <i class="fas fa-shopping-cart text-[35px] mr-[10px]"></i>
+                                <i class="fas fa-shopping-cart text-[35px] mr-[10px]"></i> 
                                 <p class="text-[20px]">Cart</p>
+                                <div class="shopee-cart-number-badge">${cart.length}</div>
                             </a>
                         </div>
                     </div>
