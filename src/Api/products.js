@@ -24,13 +24,7 @@ export const edit = (post) => {
     const url = `/products/${post.id}`;
     return instance.put(url, post);
 };
-
-// export const getAllProductsHavingBrandsCate = async () => {
-//     const { data } = await instance.get("/products?_expand=catePro");
-//     return data;
-// };
-
-// export const getProductsByIDHavingBrandsCate = async (id) => {
-//     const { data } = await instance.get("/products?expand=catePro");
-//     return data.find((item) => item.id === id);
-// };
+export const getAllSearch = () => {
+    const url = `/products?q=internet`;
+    return instance.put(url);
+};
