@@ -1,22 +1,31 @@
+import { getAllCate } from "../api/posts";
 import { reRender } from "../utils/rerender";
 
 const Nav = {
-    render() {
+    async render() {
+        const { data } = await getAllCate();
         return /* html */`
         <nav class="flex items-center justify-between">
             <ul class="flex">
                 <li><a href="/" class="block py-3 px-4 text-white hover:bg-blue-500">Home Page</a></li>
                 <li><a href="/about" class="block py-3 px-4 text-white hover:bg-blue-500">About Page</a></li>
-                <li><a href="/products" class="block py-3 px-4 text-white hover:bg-blue-500">Product Page</a></li>
+                <li><a href="/product" class="block py-3 px-4 text-white hover:bg-blue-500">Product Page</a></li>
             </ul>
             ${localStorage.getItem("user") ? `<ul class="flex">
             <li class="flex items-center">Xin chao <span class="block py-3 px-4 text-white" id="email">datlt</span></li>
             <li><a class="block py-3 px-4 text-white hover:bg-blue-500" id="logout">Logout</a></li>
-        </ul>` : `<ul class="flex">
-        <li><a href="/signup" class="block py-3 px-4 text-white hover:bg-blue-500">Đăng kí</a></li>
-        <li><a href="/signin" class="block py-3 px-4 text-white hover:bg-blue-500">Đăng nhập</a></li>
-    </ul>`}
-        </nav>`;
+        </ul>` : ""}
+            
+        </nav>
+        
+        <nav class="flex items-center justify-between">
+            <ul class="flex">
+                ${data.map((category) => `
+                    <li><a href="/#/category/${category.id}" class="block py-3 px-4 text-white hover:bg-blue-500">${category.name}</a></li>
+                `).join("")}
+            </ul>
+        </nav>
+        `;
     },
     afterRender() {
         const email = document.querySelector("#email");

@@ -19,8 +19,8 @@ const AdminPost = {
                             <tr>
                                 <td>${index + 1}</td>
                                 <td>${post.title}</td>
-                                <td><a href="/admin/news/add">Add</a></td>
                                 <td>
+                                    <a href="/#/admin/news/${post.id}/edit">Edit </a>
                                     <button data-id="${post.id}" class="btn">Remove</button>
                                 </td>
                             </tr>

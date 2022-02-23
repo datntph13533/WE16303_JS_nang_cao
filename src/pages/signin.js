@@ -67,7 +67,7 @@ const Signin = {
                 toastr.success("Đăng nhập thành công, chuyển trang sau 2s");
                 setTimeout(() => {
                     if (data.user.id === 1) {
-                        document.location.href = "/admin/news";
+                        document.location.href = "/";
                     } else {
                         document.location.href = "/";
                     }

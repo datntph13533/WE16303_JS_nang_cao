@@ -1,12 +1,10 @@
 {
   "posts": [
     {
-      "createdAt": "2022-01-10T07:26:52.549Z",
-      "title": "Annie Stroman",
-      "img": "http://placeimg.com/640/480/fashion",
-      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
       "id": "1",
-      "categoryPostId": 1
+      "title": "Annie Stroman updated 1",
+      "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645187378/svshoia37l7vl8hjcafu.png",
+      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals"
     },
     {
       "createdAt": "2022-01-10T20:33:27.477Z",
@@ -137,6 +135,62 @@
       "img": "http://res.cloudinary.com/ecommercer2021/image/upload/v1644310015/tmidn2vyavd7uasurvsz.png",
       "desc": "Noi dung bai viet moi 1",
       "id": "Fhb4ltM"
+    },
+    {
+      "title": "Annie Stroman updated",
+      "img": "http://placeimg.com/640/480/fashion",
+      "desc": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "id": "pPUxWT7"
+    },
+    {
+      "title": "New Post 21112131",
+      "img": {
+        "asset_id": "b1ae57b74137a15112b61926e904834d",
+        "public_id": "cka8ny9xvdbiuquh0ayg",
+        "version": 1645188018,
+        "version_id": "7e37a6781ce6657d61575286af09717e",
+        "signature": "624c3fcf8b870c39a6b5330c8a1d4c506b952dce",
+        "width": 1390,
+        "height": 788,
+        "format": "png",
+        "resource_type": "image",
+        "created_at": "2022-02-18T12:40:18Z",
+        "tags": [],
+        "bytes": 178679,
+        "type": "upload",
+        "etag": "ddb74281b0af36c3cb29c56298bcd9d0",
+        "placeholder": false,
+        "url": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645188018/cka8ny9xvdbiuquh0ayg.png",
+        "secure_url": "https://res.cloudinary.com/ecommercer2021/image/upload/v1645188018/cka8ny9xvdbiuquh0ayg.png",
+        "original_filename": "Screen Shot 2022-02-18 at 09.49.50"
+      },
+      "desc": "Noi dung bai viet",
+      "id": "J01Ktsi"
+    },
+    {
+      "title": "Bai viet moi 10000",
+      "img": {
+        "asset_id": "8e1a9a7b9718b3cccadae255dd680935",
+        "public_id": "qpayoe4fmdbudpkpabk7",
+        "version": 1645515203,
+        "version_id": "6672ed4567ed3ed5fa4549e8eb064d00",
+        "signature": "e6619305b2f23157591ae9f605e2e9931d2a85a0",
+        "width": 946,
+        "height": 2048,
+        "format": "jpg",
+        "resource_type": "image",
+        "created_at": "2022-02-22T07:33:23Z",
+        "tags": [],
+        "bytes": 360376,
+        "type": "upload",
+        "etag": "e0d751032f95ed3d385e1d53933e68b8",
+        "placeholder": false,
+        "url": "http://res.cloudinary.com/ecommercer2021/image/upload/v1645515203/qpayoe4fmdbudpkpabk7.jpg",
+        "secure_url": "https://res.cloudinary.com/ecommercer2021/image/upload/v1645515203/qpayoe4fmdbudpkpabk7.jpg",
+        "original_filename": "z3197364074206_ca4b875b8f6476568684a010e9e5a8d5"
+      },
+      "desc": "fdasfdaf",
+      "id": "ppxS8w3"
     }
   ],
   "categoryPosts": [
@@ -151,9 +205,34 @@
   ],
   "users": [
     {
-      "email": "nguyenthanhdat27042002@gmail.com",
-      "password": "$2a$10$RZPQW0/DRGUpo9k2R9V2M.x4sMDI0rHkfXeXtjPomNKucvki9s9DG",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$a0/z9dDn1EU92K3Q2vYSFu5cICbN6khbqz3wvPfXjLHof4J41N1.K",
       "id": 1
+    },
+    {
+      "email": "member@gmail.com",
+      "password": "$2a$10$x15SoAE89cug7ObbCyEM0OaqQ5kTBmJB1f/KvXULtN0ZwonC94aqS",
+      "id": 2
+    },
+    {
+      "email": "member2@gmail.com",
+      "password": "$2a$10$590XBx.sOSfP6gFEnFtTTe4ebGF781tGsxZqrPJ3i2196QrcJyq/y",
+      "id": 3
+    },
+    {
+      "email": "member3@gmail.com",
+      "password": "$2a$10$yJfC1WimCkwUWUwwzDyzTO5q7czJpU4lvXZaq8XBtnyA1lKgoqx.K",
+      "id": 4
+    },
+    {
+      "email": "dafaf@gmail.com",
+      "password": "$2a$10$aMRJ9w.x8X4bQX6KPLLeHOJK68V9qxG5djNgLEuFlNu2bAztcCiVS",
+      "id": 5
+    },
+    {
+      "email": "member100@gmail.com",
+      "password": "$2a$10$Q66peqKcmeyjPycrnDjeQeNROg4/yu1TJQN0o3Qw9OTc4YWtdLnRa",
+      "id": 6
     }
   ],
   "products": [
