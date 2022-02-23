@@ -2,16 +2,6 @@
   "products": [
     {
       "categoryProductId": 1,
-      "name": "ggggggggggggggggggggg",
-      "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645449856/fdqcljo6uxh2ypwmrfce.jpg",
-      "price": 10000000,
-      "quantity": 10000,
-      "short_desc": "gggggggggggggg",
-      "desc": "ggggggggggggggg",
-      "id": 9
-    },
-    {
-      "categoryProductId": 1,
       "name": "iPhone 13 Pro Max 256GB I Chính hãng VN/A",
       "img": "http://res.cloudinary.com/dvj4wwihv/image/upload/v1645461873/jcq4pfb38tbcorbheuok.webp",
       "price": 33190000,

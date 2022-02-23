@@ -62,11 +62,11 @@ router.on({
         const { id } = data;
         print(detailBlog, id);
     },
-    "/categoryProducts/:id*": ({ data }) => {
+    "/categoryProducts/:id": ({ data }) => {
         const { id } = data;
         print(ProductList, id);
     },
-    "/products/:id*": ({ data }) => {
+    "/products/:id": ({ data }) => {
         const { id } = data;
         print(ProductDetail, id);
     },

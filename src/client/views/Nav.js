@@ -7,7 +7,7 @@ const Nav = {
         if (localStorage.getItem("cart")) {
             cart = JSON.parse(localStorage.getItem("cart"));
         }
-        const response = await getAll();
+        const { data } = await getAll();
         return /* html */ `
             <div class="bg-white h-[50px] mb-[10px]">
                 <div class="max-w-[1440px] mx-auto text-[15px] leading-[20px]">
@@ -77,8 +77,8 @@ const Nav = {
                         <nav class="">
                             <ul class="flex h-[50px] oy-2">
                                 <li><a href="/" class="menu-item">Trang chủ</a></li>
-                                ${response.data.map((post) => /* html */ `
-                                <li><a href="/categoryProducts/${post.id}?_embed=products" class="menu-item">${post.title}</a></li>
+                                ${data.map((post) => /* html */ `
+                                <li><a href="/categoryProducts/${post.id}" class="menu-item">${post.title}</a></li>
                                 `).join("")}
                                 <li><a href="/blog" class="menu-item">Tin tức công nghệ</a></li>
                                 <li><a href="/" class="menu-item">Liên hệ</a></li>
